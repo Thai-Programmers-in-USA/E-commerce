@@ -11,7 +11,6 @@ import ProductCard from '../ProductCard'
         {products.map(product => 
             <ProductCard product={product} />
         )}
-     
         </div>
     )
 }

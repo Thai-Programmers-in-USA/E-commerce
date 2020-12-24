@@ -6,7 +6,6 @@ import FeaturedCollection from './FeaturedCollection'
 const Features = () => {
     return (
         <div>
-
             <FeaturedCategories />
             <FeaturedSales />
             <FeaturedCollection />
