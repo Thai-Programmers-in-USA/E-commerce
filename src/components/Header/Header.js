@@ -10,7 +10,7 @@ import SearchBar from '../SearchBar';
     return (
         <div className={classes.container}>
         <div  className={classes.headerTopContainer}>
-            <Typography variant="body" component="p">LOGO</Typography>
+            <Typography variant="body" component="p">EMPEROR</Typography>
             <SearchBar />
             <Typography variant="body" component="p">Cart</Typography>
         </div>
