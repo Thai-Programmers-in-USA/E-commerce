@@ -28,13 +28,13 @@ const styles = ({palette, breakpoints, spacing}) => ({
             flex:1,
             margin: '0 15px',
             maxWidth: '800px',
-            boxShadow: '0px 2px 5px #ddd'
+            boxShadow: '0px 2px 4px #f0f0f0'
         }
     },
     searchInput: {
         padding: '8px',
         borderWidth: '1px 0px 1px 1px',
-        borderColor: '#d6d6d6',
+        borderColor: '#dedede',
         borderStyle: 'solid',
         height: '100%',
         width: '100%',

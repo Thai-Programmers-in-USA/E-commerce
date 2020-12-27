@@ -22,16 +22,12 @@ function App({classes}) {
 const styles = ({palette, breakpoints, spacing,typography}) => ({
     container: {
       margin: "0 auto",
-      padding: '10px',
       textAlign: "center",
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
       justifyContent: "flex-start",
-      [breakpoints.up('md')]: {
-      padding: '20px',
-       
-      },
+      
     }
 });
 

@@ -25,7 +25,7 @@ import IconButton from '@material-ui/core/IconButton';
                     <Typography variant="body1" component="p" className={classes.allOrders}>on all orders over $75</Typography>
                 </div>
             </div>
-            <IconButton aria-label="cart">
+            <IconButton aria-label="cart" className={classes.cartIconButton}>
                 <Badge badgeContent={3} color="primary" className={classes.cartBadge}>
                     <ShoppingCartIcon className={classes.ShoppingCartIcon} />
                 </Badge>
@@ -44,9 +44,10 @@ Header.propTypes = {
 const styles = ({palette, breakpoints, spacing,typography}) => ({
     container: {
         width: '100%',
-        [breakpoints.up('md')]: {
-            width: '90%',
-            maxWidth: '1400px'
+        boxShadow: '0px 2px 4px #f0f0f0',
+        padding: '5px 15px',
+        [breakpoints.up('sm')]: {
+            padding: '15px 25px',
         }
     },
     headerTopContainer: {
@@ -79,11 +80,8 @@ const styles = ({palette, breakpoints, spacing,typography}) => ({
         }
     },
     truckIcon: {
-        fontSize: '40px',
+        fontSize: '38px',
         color: palette.secondary.main,
-        [breakpoints.up('md')]: {
-            fontSize: '45px',
-        }
     },
     freeShippingTextContainer: {
         display: 'flex',
@@ -99,15 +97,15 @@ const styles = ({palette, breakpoints, spacing,typography}) => ({
     allOrders: {
         fontSize: '13px',
     },
+    cartIconButton:{
+        padding: 0,
+        '&:hover': {
+            backgroundColor: 'transparent'
+        }
+    },
     ShoppingCartIcon: {
         fontSize: '35px',
-        color: palette.secondary.main,
-        [breakpoints.up('sm')]: {
-            fontSize: '40px',
-        },
-        [breakpoints.up('md')]: {
-            fontSize: '45px',
-        }
+        color: palette.secondary.main, 
     },
   '@global': {
     '[class*="MuiBadge-badge"]': {
@@ -119,6 +117,10 @@ const styles = ({palette, breakpoints, spacing,typography}) => ({
         alignItems: 'center',
         fontSize: '13px',
         [breakpoints.up('sm')]: {
+            padding: '8px 4px',
+            fontSize: '13px',
+        },
+        [breakpoints.up('md')]: {
             padding: '10px 6px',
             fontSize: '15px',
         },
