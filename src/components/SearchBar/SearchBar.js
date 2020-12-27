@@ -1,13 +1,27 @@
 import React from 'react'
+import Typography from '@material-ui/core/Typography';
+import withStyles from '@material-ui/core/styles/withStyles';
 
 
- const SearchBar =() => {
+ const SearchBar =({classes}) => {
     return (
-        <div>
+        <Typography variant="body1" component="p" className={classes.searchBar}>
         SearchBar
-        </div>
+        </Typography>
     )
 }
 
+const styles = ({palette, breakpoints, spacing}) => ({
+    searchBar: {
+        flex:1,
+        backgroundColor: "lightgrey",
+        margin: '0 15px',
+        display: 'none',
+        [breakpoints.up('sm')]: {
+            display: 'flex',
+        }
+    }
+});
 
-export default SearchBar;
+
+export default withStyles(styles)(SearchBar)
