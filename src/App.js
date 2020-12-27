@@ -22,7 +22,6 @@ function App({classes}) {
 const styles = ({palette, breakpoints, spacing,typography}) => ({
     container: {
       margin: "0 auto",
-      // width: "95%",
       padding: '10px',
       textAlign: "center",
       display: "flex",
