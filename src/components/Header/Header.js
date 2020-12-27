@@ -7,6 +7,8 @@ import SearchBar from '../SearchBar';
 import MenuIcon from '@material-ui/icons/Menu';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import LocalShippingIcon from '@material-ui/icons/LocalShipping';
+import Badge from '@material-ui/core/Badge';
+import IconButton from '@material-ui/core/IconButton';
 
  const Header =({classes}) => {
     return (
@@ -23,8 +25,12 @@ import LocalShippingIcon from '@material-ui/icons/LocalShipping';
                     <Typography variant="body1" component="p" className={classes.allOrders}>on all orders over $75</Typography>
                 </div>
             </div>
-            <ShoppingCartIcon className={classes.ShoppingCartIcon} />
-            </div>
+            <IconButton aria-label="cart">
+                <Badge badgeContent={3} color="primary" className={classes.cartBadge}>
+                    <ShoppingCartIcon className={classes.ShoppingCartIcon} />
+                </Badge>
+             </IconButton>
+                </div>
         </div>
         <NavBar />
         </div>
@@ -62,14 +68,14 @@ const styles = ({palette, breakpoints, spacing,typography}) => ({
     freeShippingAndCartContainer: {
         display: 'flex',
         justifyContent:'center',
-        alignItems: 'flex-end',
+        alignItems: 'center',
     },
     freeShippingContainer: {        
         display: 'none',
         [breakpoints.up(680)]: {
         display: 'flex',
         justifyContent:'center',
-        alignItems: 'flex-end',
+        alignItems: 'center',
         }
     },
     truckIcon: {
@@ -102,7 +108,23 @@ const styles = ({palette, breakpoints, spacing,typography}) => ({
         [breakpoints.up('md')]: {
             fontSize: '45px',
         }
-    }
+    },
+  '@global': {
+    '[class*="MuiBadge-badge"]': {
+        border: `2px solid #ffffff`,
+        padding: '7px 2px',
+        borderRadius: '50%',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        fontSize: '13px',
+        [breakpoints.up('sm')]: {
+            padding: '10px 6px',
+            fontSize: '15px',
+        },
+    },
+
+  },
 });
 
 export default withStyles(styles)(Header)
