@@ -4,23 +4,25 @@ import Card from '@material-ui/core/Card';
 import { blueGrey } from '@material-ui/core/colors';
 
 const useStyles = makeStyles((theme) => ({
+  // TODO: align all contents to the left
   root: {
-    backgroundColor: blueGrey
+    backgroundColor: blueGrey,
   }
 }));
 
-const FeaturedCard = () => {
+const FeaturedCard = ({ featureData }) => {
   const classes = useStyles();
+  // TODO: destructure style for a unique botton color
+  const { data } = featureData;
 
-    return (
-      <Card className={classes.root}>
-        <h2>Title</h2>
-            <p> 
-              Discover the latest designer, modern and contemporary furniture and accessories from around the world.
-            </p>
-            <button>Click Me!</button>
-      </Card>
-    )
+  // TODO: make link button redirect to page
+  return (
+    <Card className={classes.root}>
+      <h2>{ data.title }</h2>
+      <p>{ data.desc }</p>
+      <button>{ data.linkName }</button>
+    </Card>
+  )
 }
 
 export default FeaturedCard;
