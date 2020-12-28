@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
+
 import FeaturedCard from './FeaturedCard';
 
 const featuredData = [
@@ -53,7 +54,7 @@ const FeaturedSales = () => {
         <div className={classes.root}>
             <Grid container spacing={2}>
                 {featuredData.map(feature => (
-                    <Grid item xs={ feature.itemSize }>
+                    <Grid item xs={ feature.itemSize } key={feature.data.title}>
                     <FeaturedCard featureData={ feature } />
                 </Grid>
                 ))}

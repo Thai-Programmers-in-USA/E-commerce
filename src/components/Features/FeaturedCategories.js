@@ -1,8 +1,9 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
+
 import FeaturedCard from './FeaturedCard';
-import imageUrl from '../../assets/img/home_page/living-room_1350x636.jpg'
+// import imageUrl from '../../assets/img/home_page/living-room_1350x636.jpg'
 
 const featuredData = [
     {
@@ -65,9 +66,9 @@ const FeaturedCategories = () => {
         <div className={classes.root}>
             <Grid container spacing={2}>
                 {featuredData.map(feature => (
-                    <Grid item xs={ feature.itemSize }>
-                    <FeaturedCard featureData={ feature } />
-                </Grid>
+                    <Grid item xs={ feature.itemSize } key={feature.data.title}>
+                        <FeaturedCard featureData={ feature } />
+                    </Grid>
                 ))}
             </Grid> 
         </div>
