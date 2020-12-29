@@ -3,42 +3,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 
 import FeaturedCard from './FeaturedCard';
+import featuredSaleData from '../../assets/staticData/featuredSaleData';
 
-const featuredData = [
-    {
-        itemSize : 12,
-        itemStyle: '',
-        data: {
-            title: 'Up to 30% Off',
-            desc: `Select product in our 'Kids' collection`,
-            imgURL: '',
-            linkName: 'Shop Now',
-            linkURL: ''
-        }
-    },
-    {
-        itemSize : 6,
-        itemStyle: '',
-        data: {
-            title: 'Up to 50% Off',
-            desc: 'Home Aceessories',
-            imgURL: '',
-            linkName: 'Shop Now',
-            linkURL: ''
-        }
-    },
-    {
-        itemSize : 6,
-        itemStyle: '',
-        data: {
-            title: 'Up to 25% Off',
-            desc: 'Textiles & Rugs',
-            imgURL: '',
-            linkName: 'Shop Now',
-            linkURL: ''
-        }
-    }
-];
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -53,7 +19,7 @@ const FeaturedSales = () => {
     return (
         <div className={classes.root}>
             <Grid container spacing={2}>
-                {featuredData.map(feature => (
+                {featuredSaleData.map(feature => (
                     <Grid item xs={ feature.itemSize } key={feature.data.title}>
                     <FeaturedCard featureData={ feature } />
                 </Grid>
