@@ -27,11 +27,11 @@ const styles = ({palette, breakpoints}) => ({
     container: {
         display: "flex",
         flexDirection: "column",
-        gap: "20px"
     },
     cardsContainer: {
         display: "flex",
-        gap: "15px",
+        justifyContent: "center",
+        alignItem: "center"
     },
     title: {
         fontWeight: 700,

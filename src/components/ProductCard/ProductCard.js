@@ -10,7 +10,7 @@ import Card from '@material-ui/core/Card';
 const ProductCard = ({product, classes}) => {
     console.log(product);
     return (
-        <Card className={classes.cardContainer} variant="outlined">
+        <Card className={classes.card} variant="outlined">
                 <img src={product.img} />
                 <br></br>
                 <br></br>
@@ -30,12 +30,13 @@ const ProductCard = ({product, classes}) => {
 ProductCard.propTypes = {
     classes: PropTypes.object.isRequired,
     product: PropTypes.object.isRequired
-  };
+};
 
 const styles = ({palette,breakpoints}) => ({
-    cardContainer: {
+    card: {
         minWidth: "220px",
-        height: 300
+        height: 300,
+        marginRight: "20px"
     },
     price: {
         color: palette.primary.main,
