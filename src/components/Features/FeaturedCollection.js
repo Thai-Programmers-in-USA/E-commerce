@@ -1,8 +1,9 @@
 import React from 'react'
 import ProductCard from '../ProductCard'
-import productData from '../ProductCard/ProductData'
+import productData from '../ProductCard/productData'
 import withStyles from '@material-ui/core/styles/withStyles';
 import Typography from '@material-ui/core/Typography';
+import FeaturedCollectionSecond from './FeaturedCollectionSecond'
 
 
  const FeaturedCollection = ({classes}) => {
@@ -16,7 +17,7 @@ import Typography from '@material-ui/core/Typography';
                     <ProductCard product={product} key={index} />
                 )}
             </div>
-            <p>big container</p>
+            <FeaturedCollectionSecond />
         </div>
 
     )
@@ -25,11 +26,12 @@ import Typography from '@material-ui/core/Typography';
 const styles = ({palette, breakpoints}) => ({
     container: {
         display: "flex",
-        flexDirection: "column"
+        flexDirection: "column",
+        gap: "20px"
     },
     cardsContainer: {
         display: "flex",
-        gap: "15px"
+        gap: "15px",
     },
     title: {
         fontWeight: 700,
