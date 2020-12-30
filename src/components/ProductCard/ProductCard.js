@@ -34,7 +34,7 @@ ProductCard.propTypes = {
 
 const styles = ({palette,breakpoints}) => ({
     card: {
-        minWidth: "220px",
+        minWidth: "200px",
         maxWidth: "250px",
         height: 300,
     },

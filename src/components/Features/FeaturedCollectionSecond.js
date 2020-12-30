@@ -31,23 +31,22 @@ FeaturedCollectionSecond.propTypes = {
 const styles = ({palette, breakpoints}) => ({
     bigContainer: {
         display: "flex",
-        backgroundColor: "red",
-        width: "80%"
+        justifyContent: "center",
+        alignItems: "center",
+        width: "100%"
     },
     leftContainer: {
         display: "flex",
         flexDirection: "column",
-        backgroundColor: "yellow",
-        width: "300px"
     },
     rightContainer: {
-        // width: "50%",
         display: "flex",
+        flex: 1,
         flexDirection: "column",
-        backgroundColor: "blue"
+        justifyContent: "center",
     },
     img: {
-        width: "50%"
+        width: "570px"
     }
 })
 
