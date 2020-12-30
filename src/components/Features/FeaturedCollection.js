@@ -28,7 +28,8 @@ const styles = ({palette, breakpoints}) => ({
         flexDirection: "column"
     },
     cardsContainer: {
-        display: "flex"
+        display: "flex",
+        gap: "15px"
     },
     title: {
         fontWeight: 700,

@@ -35,7 +35,7 @@ ProductCard.propTypes = {
 const styles = ({palette,breakpoints}) => ({
     cardContainer: {
         minWidth: 275,
-        height: 300,
+        height: 300
     },
     price: {
         color: palette.primary.main,
@@ -56,4 +56,4 @@ const styles = ({palette,breakpoints}) => ({
 })
   
 
-export default withStyles(styles)(ProductCard)
+export default withStyles(styles)(ProductCard);
