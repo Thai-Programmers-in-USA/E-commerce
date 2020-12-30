@@ -26,16 +26,20 @@ import FeaturedCollectionSecond from './FeaturedCollectionSecond'
 const styles = ({palette, breakpoints}) => ({
     container: {
         display: "flex",
+        justifyContent: "center",
+        alignItems: "stretch",
         flexDirection: "column",
     },
     cardsContainer: {
         display: "flex",
-        justifyContent: "center",
-        alignItem: "center"
+        justifyContent: "space-between",
+        alignItems: "center",
+        backgroundColor: "black",
     },
     title: {
+        fontSize: 30,
         fontWeight: 700,
-        color: palette.primary.secondary
+        color: palette.secondary.main
     }
 })
 

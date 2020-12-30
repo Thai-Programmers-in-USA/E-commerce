@@ -2,10 +2,11 @@ import React from 'react'
 import FeaturedCategories from './FeaturedCategories'
 import FeaturedSales from './FeaturedSales'
 import FeaturedCollection from './FeaturedCollection'
+import withStyles from '@material-ui/core/styles/withStyles';
 
-const Features = () => {
+const Features = ({classes}) => {
     return (
-        <div>
+        <div className={classes.container}>
             <FeaturedCategories />
             <FeaturedSales />
             <FeaturedCollection />
@@ -13,4 +14,11 @@ const Features = () => {
     )
 }
 
-export default Features;
+const styles =({palette, breakpoints}) => ({
+    container: {
+        display: "flex",
+        flexDirection: "column",
+    }
+})
+
+export default withStyles(styles)(Features);
