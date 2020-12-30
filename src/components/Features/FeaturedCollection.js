@@ -1,18 +1,36 @@
 import React from 'react'
 import ProductCard from '../ProductCard'
+import productData from '../ProductCard/ProductData'
+import withStyles from '@material-ui/core/styles/withStyles';
+import { FullscreenExit } from '@material-ui/icons';
 
 
- const FeaturedCollection = () => {
+ const FeaturedCollection = ({classes}) => {
 
-    const products = ["Product 1","Product 2","Product 3","Product 4","Product 5"]
+
+
     return (
-        <div>
-        Featured Collection
-        {products.map(product => 
-            <ProductCard product={product} />
-        )}
+        <div className={classes.container}>
+            Featured Collection
+            <div className={classes.cardsContainer}>
+                {productData.map((product, index) => 
+                    <ProductCard product={product} key={index} />
+                )}
+            </div>
+            <p>big container</p>
         </div>
+
     )
 }
 
-export default FeaturedCollection;
+const styles = ({palette, breakpoints}) => ({
+    container: {
+        display: "flex",
+        flexDirection: "column"
+    },
+    cardsContainer: {
+        display: "flex"
+    }
+})
+
+export default withStyles(styles)(FeaturedCollection);
