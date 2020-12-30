@@ -2,16 +2,15 @@ import React from 'react'
 import ProductCard from '../ProductCard'
 import productData from '../ProductCard/ProductData'
 import withStyles from '@material-ui/core/styles/withStyles';
-import { FullscreenExit } from '@material-ui/icons';
+import Typography from '@material-ui/core/Typography';
 
 
  const FeaturedCollection = ({classes}) => {
 
 
-
     return (
         <div className={classes.container}>
-            Featured Collection
+            <Typography variant="subtitle2" component="p" className={classes.title}>Featured Collection</Typography>
             <div className={classes.cardsContainer}>
                 {productData.map((product, index) => 
                     <ProductCard product={product} key={index} />
@@ -30,6 +29,10 @@ const styles = ({palette, breakpoints}) => ({
     },
     cardsContainer: {
         display: "flex"
+    },
+    title: {
+        fontWeight: 700,
+        color: palette.primary.secondary
     }
 })
 
