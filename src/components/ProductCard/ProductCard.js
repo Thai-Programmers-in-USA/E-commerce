@@ -12,8 +12,13 @@ const ProductCard = ({product, classes}) => {
     return (
         <Card className={classes.cardContainer} variant="outlined">
                 <img src={product.img} />
+                <br></br>
+                <br></br>
                 <Typography className={classes.name} variant="body2" component="p" gutterBottom>
                     {product.name}
+                </Typography>
+                <Typography className={classes.brand} variant="body2" component="p" gutterBottom>
+                    {product.brand}
                 </Typography>
                 <Typography className={classes.price} variant="body2" component="p" gutterBottom>
                     {product.price}
@@ -29,16 +34,24 @@ ProductCard.propTypes = {
 
 const styles = ({palette,breakpoints}) => ({
     cardContainer: {
-        // display: "flex",
-        // flexDirection: "column",
         minWidth: 275,
-        height: 300
+        height: 300,
     },
     price: {
-        color: palette.primary.main
+        color: palette.primary.main,
+        textAlign: "left",
+        marginLeft: "5%"
     },
     name: {
-        color: palette.secondary.main
+        color: palette.secondary.main,
+        textAlign: "left",
+        marginLeft: "5%"
+    },
+    brand: {
+        fontSize: "small",
+        color: palette.secondary.light,
+        textAlign: "left",
+        marginLeft: "5%"
     }
 })
   
