@@ -17,6 +17,8 @@ import FeaturedCollectionSecond from './FeaturedCollectionSecond'
                     <ProductCard product={product} key={index} />
                 )}
             </div>
+            <br></br>
+            <br></br>
             <FeaturedCollectionSecond />
         </div>
 
@@ -36,7 +38,8 @@ const styles = ({palette, breakpoints}) => ({
         alignItems: "center"
     },
     title: {
-        fontSize: 30,
+        fontSize: 20,
+        marginBottom: "2%",
         fontWeight: 700,
         color: palette.secondary.main
     }
