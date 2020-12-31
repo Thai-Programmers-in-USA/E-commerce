@@ -28,13 +28,12 @@ const styles = ({palette, breakpoints}) => ({
         display: "flex",
         justifyContent: "center",
         alignItems: "stretch",
-        flexDirection: "column",
+        flexDirection: "column"
     },
     cardsContainer: {
         display: "flex",
         justifyContent: "space-between",
-        alignItems: "center",
-        backgroundColor: "black",
+        alignItems: "center"
     },
     title: {
         fontSize: 30,
