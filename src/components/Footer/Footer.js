@@ -6,38 +6,36 @@ import withStyles from '@material-ui/core/styles/withStyles';
 import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
+import { DragHandleOutlined } from '@material-ui/icons';
 
 
 const Footer = ({classes}) => {
-  const [openNa, setOpenNa] = useState(false);
-  const [openCat, setOpenCat] = useState(false);
-  const matches = useMediaQuery('(min-width:600px)');
-
+  const isBigScreen = useMediaQuery('(min-width:970px)');
+  const [isOpenCollapse, setIsOpenCollapse] = useState({nav: isBigScreen, cat: isBigScreen});
+  
 useEffect(() => {
-  if (matches) {
-    setOpenNa(true);
-    setOpenCat(true);
-  } else {
-    setOpenNa(false);
-    setOpenCat(false);
+   setIsOpenCollapse({nav: isBigScreen, cat: isBigScreen})
+  
+},[isBigScreen])
+
+const handleCollapse = (section) => {
+  if(!isBigScreen) {
+    if(section === "nav") {
+      setIsOpenCollapse({...isOpenCollapse, nav: !isOpenCollapse.nav})
+    } else {
+      setIsOpenCollapse({...isOpenCollapse, cat: !isOpenCollapse.cat})
+    }
   }
-},[matches])
-console.log(matches)
-  const onNavigateHandle = () => {
-  setOpenNa(!openNa) 
-} 
- const onCatHandle =() => {
-  setOpenCat(!openCat) 
- }
+}
     return (
       <div className={classes.footerContainer}>
         <div  className={classes.row}>
-          <div className={classes.subRow} onClick={onNavigateHandle}>
+          <div className={classes.subRow} onClick={() => handleCollapse("nav")}>
             <button  className={classes.footerBtn} >Navigate
             </button>
-            {openNa ? <RemoveIcon className={classes.dropdownIcon}/> : <KeyboardArrowDownIcon className={classes.dropdownIcon}/>}
-            <Collapse in={openNa} timeout="auto" unmountOnExit>
-            <ul style={{ listStyle: "none",  textAlign: 'left' }} classaName={classes.list}>
+            {isOpenCollapse.nav ? <RemoveIcon className={classes.dropdownIcon}/> : <KeyboardArrowDownIcon className={classes.dropdownIcon}/>}
+            <Collapse in={isOpenCollapse.nav} timeout="auto" unmountOnExit>
+            <ul style={{ listStyle: "none",  textAlign: 'left' }} className={classes.list}>
               <li>Home</li>
               <li>Catergory</li>
               <li>Brands</li>
@@ -46,11 +44,11 @@ console.log(matches)
             </ul>
             </Collapse>
           </div>
-          <div className={classes.subRow} onClick={onCatHandle} >
-            <button className={classes.footerBtn} >Catergory</button>
-            {openCat ? <RemoveIcon className={classes.dropdownIcon}/> : <KeyboardArrowDownIcon className={classes.dropdownIcon}/>}
-            <Collapse in={openCat} timeout="auto" unmountOnExit>
-            <ul style={{ listStyle: "none",  textAlign: 'left' }} classaName={classes.list}>
+          <div className={classes.subRow} onClick={() => handleCollapse("cat")} >
+            <button className={classes.footerBtn} >Category</button>
+            {isOpenCollapse.cat ? <RemoveIcon className={classes.dropdownIcon}/> : <KeyboardArrowDownIcon className={classes.dropdownIcon}/>}
+            <Collapse in={isOpenCollapse.cat} timeout="auto" unmountOnExit>
+            <ul style={{ listStyle: "none",  textAlign: 'left' }} className={classes.list}>
               <li>Living</li>
               <li>Dining</li>
               <li>Office</li>
