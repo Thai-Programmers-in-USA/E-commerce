@@ -1,16 +1,28 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Collapse from '@material-ui/core/Collapse';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import RemoveIcon from '@material-ui/icons/Remove';
 import withStyles from '@material-ui/core/styles/withStyles';
 import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 
 const Footer = ({classes}) => {
   const [openNa, setOpenNa] = useState(false);
   const [openCat, setOpenCat] = useState(false);
+  const matches = useMediaQuery('(min-width:600px)');
 
+useEffect(() => {
+  if (matches) {
+    setOpenNa(true);
+    setOpenCat(true);
+  } else {
+    setOpenNa(false);
+    setOpenCat(false);
+  }
+},[matches])
+console.log(matches)
   const onNavigateHandle = () => {
   setOpenNa(!openNa) 
 } 
@@ -61,7 +73,7 @@ const Footer = ({classes}) => {
           </div>
           <div className={classes.subRowNoDropdown}>
             <button className={classes.footerBtn}>Subscribe</button>
-            <Typography className={classes.textSubscribe} variant="subtitle" component="p">Sign up to receive 15% off your first order!</Typography>
+            <Typography className={classes.textSubscribe} variant="subtitle1" component="p">Sign up to receive 15% off your first order!</Typography>
             <input className={classes.signUpInput}/>
             <input type="submit" value="sign up" className={classes.signUpBtn} />
           </div>
