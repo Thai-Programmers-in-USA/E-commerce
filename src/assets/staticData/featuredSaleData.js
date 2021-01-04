@@ -5,7 +5,7 @@ const featuredSaleData = [
       data: {
           title: 'Up to 30% Off',
           desc: `Select product in our 'Kids' collection`,
-          imgURL: '../img/home_page/living-room_1350x636.jpg',
+          imgURL: '../../assets/img/home_page/living-room_1350x636.jpg',
           linkName: 'Shop Now',
           linkURL: ''
       }
