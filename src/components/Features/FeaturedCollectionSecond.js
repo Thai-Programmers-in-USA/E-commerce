@@ -7,7 +7,6 @@ import PropTypes from 'prop-types';
 import Button from '@material-ui/core/Button';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
-import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 
@@ -51,10 +50,12 @@ const FeaturedCollectionSecond = ({classes}) => {
                         </Button>
                     </FormControl>
                     <Button className={classes.btnAddToCart} variant="contained" color="primary">
-                        <Typography className={classes.btnAddToCartText} variant="body2" component="p" gutterBottom>Add To Cart</Typography>
+                        <Typography className={classes.btnAddToCartText} variant="subTitle2" component="p" gutterBottom>Add To Cart</Typography>
                     </Button>
                 </div>
-                <p>View full detail</p>
+                <a href="/" className={classes.link}>
+                    <Typography variant="body2">View full detail</Typography>
+                </a>
                 <p>Share this</p>
             </div>
         </Card>
@@ -92,17 +93,23 @@ const styles = ({palette, breakpoints}) => ({
         color: palette.secondary.main,
         width: "30%",
         height: "39px",
-        marginRight: "10px"
+        marginRight: "10px",
+        textTransform: "capitalize"
     },
     selectDropDown: {
-        paddingRight: "30px",
+        paddingRight: "35px",
         padding: 0
     },
     btnAddToCart: {
+        marginBottom: "30px",
         backgroundColor: palette.primary.main,
-        width: "60%"
+        width: "60%",
+        textTransform: "capitalize",
+        fontWeight: 700
     },
-    
+    link: {
+        color: palette.primary.main,
+    }
 })
 
 export default withStyles(styles)(FeaturedCollectionSecond)
