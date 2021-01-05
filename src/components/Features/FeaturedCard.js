@@ -1,10 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Card from '@material-ui/core/Card';
+import { Card, CardContent, Button, Typography, makeStyles } from '@material-ui/core';
 
+const useStyles = makeStyles({
+  root: {
+    minHeight: 260,
+    // justifyContent: "end"
+  },
+  cardContentStyle: {
+    marginBottom: "25px"
+  }
+});
 
 const FeaturedCard = ({ featureData }) => {
-  
+  const classes = useStyles();
   // TODO: destructure style for a unique botton color
   const { data } = featureData;
   const bgImage = {  
@@ -18,10 +27,16 @@ const FeaturedCard = ({ featureData }) => {
   
   // TODO: make link button redirect to page
   return (
-    <Card style={bgImage}>
-      <h2>{ data.title }</h2>
-      <p>{ data.desc }</p>
-      <button>{ data.linkName }</button>
+    <Card style={bgImage} align="left" className={classes.root}>
+      <CardContent className={classes.cardContentStyle}>
+        <Typography variant="h5" component="h2">
+          { data.title }
+        </Typography>
+        <Typography component="p" >
+          { data.desc }
+        </Typography>
+         <Button variant="contained" color="primary" size="small" >{ data.linkName }</Button>
+      </CardContent>
     </Card>
   )
 }

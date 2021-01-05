@@ -1,11 +1,11 @@
-const featuredSaleData = [
+const featuredSaleData = [ // in source
   {
       itemSize : 12,
       itemStyle: '',
       data: {
           title: 'Up to 30% Off',
           desc: `Select product in our 'Kids' collection`,
-          imgURL: '../../assets/img/home_page/living-room_1350x636.jpg',
+          imgURL: '../../assets/img/home_page/shop-kid_1456x320.png',
           linkName: 'Shop Now',
           linkURL: ''
       }
@@ -27,7 +27,7 @@ const featuredSaleData = [
       data: {
           title: 'Up to 25% Off',
           desc: 'Textiles & Rugs',
-          imgURL: '',
+          imgURL: '../../assets/img/home_page/shop-rugs_665x300.png',
           linkName: 'Shop Now',
           linkURL: ''
       }
