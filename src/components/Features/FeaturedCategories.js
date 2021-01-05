@@ -26,14 +26,14 @@ const FeaturedCategories = () => {
     return (
         <div className={classes.root}>
             <Grid container spacing={2}>
-                {featureCategoryData.map((feature, idx) => (
+                {categoryStyleOptions.map((styleOption, idx) => (
                     <Grid item 
-                    key={ feature.id }
-                    sm={ categoryStyleOptions[idx].size} 
+                    key={ featureCategoryData[idx].id }
+                    sm={ styleOption.size} 
                     >
                         <FeaturedCard 
-                            featureData={ feature } 
-                            featureStyle={ categoryStyleOptions[idx].card }
+                            featureData={ featureCategoryData[idx] } 
+                            featureStyle={ styleOption.card }
                         />
                     </Grid>
                 ))}

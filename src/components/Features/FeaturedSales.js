@@ -5,7 +5,6 @@ import Grid from '@material-ui/core/Grid';
 import FeaturedCard from './FeaturedCard';
 import featuredSaleData from '../../assets/staticData/featuredSaleData';
 
-
 const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,
@@ -15,13 +14,24 @@ const useStyles = makeStyles((theme) => ({
 
 const FeaturedSales = () => {
     const classes = useStyles();
+    const saleStyleOptions = [
+        {size: 12, card: 'default'},
+        {size: 6, card: 'TR'},
+        {size: 6, card: 'TR'}, 
+    ]
 
     return (
         <div className={classes.root}>
             <Grid container spacing={2}>
-                {featuredSaleData.map(feature => (
-                    <Grid item xs={ feature.itemSize } key={feature.data.title}>
-                    <FeaturedCard featureData={ feature } />
+                {saleStyleOptions.map((styleOption, idx) => (
+                    <Grid item 
+                        key={ featuredSaleData[idx].id }
+                        xs={ styleOption.size } 
+                    >
+                        <FeaturedCard 
+                            featureData={ featuredSaleData[idx] } 
+                            featureStyle={ styleOption.card }
+                        />
                 </Grid>
                 ))}
             </Grid> 

@@ -1,18 +1,16 @@
-const featuredSaleData = [
-  {
-      itemSize : 12,
-      itemStyle: '',
+const featuredSaleData = [ 
+    {
+      id: 'nr93mdlgw',
       data: {
           title: 'Up to 30% Off',
           desc: `Select product in our 'Kids' collection`,
-          imgURL: '../img/home_page/living-room_1350x636.jpg',
+          imgURL: '../../assets/img/home_page/shop-kid_1456x320.png',
           linkName: 'Shop Now',
           linkURL: ''
       }
-  },
-  {
-      itemSize : 6,
-      itemStyle: '',
+    },
+    {
+      id: '7fortnw0',
       data: {
           title: 'Up to 50% Off',
           desc: 'Home Aceessories',
@@ -20,18 +18,15 @@ const featuredSaleData = [
           linkName: 'Shop Now',
           linkURL: ''
       }
-  },
-  {
-      itemSize : 6,
-      itemStyle: '',
+    },
+    {
+      id: 'd9engafg',
       data: {
           title: 'Up to 25% Off',
           desc: 'Textiles & Rugs',
-          imgURL: '',
+          imgURL: '../../assets/img/home_page/shop-rugs_665x300.png',
           linkName: 'Shop Now',
           linkURL: ''
       }
-  }
-];
-
-export default featuredSaleData;
+    }
+  ];
