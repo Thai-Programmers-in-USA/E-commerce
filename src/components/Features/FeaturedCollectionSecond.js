@@ -56,7 +56,7 @@ const FeaturedCollectionSecond = ({classes}) => {
                 <a href="/" className={classes.link}>
                     <Typography variant="body2">View full detail</Typography>
                 </a>
-                <p>Share this</p>
+                <Typography className={classes.shareText} variant="subtitle2">share this:</Typography>
             </div>
         </Card>
     )
@@ -109,7 +109,12 @@ const styles = ({palette, breakpoints}) => ({
     },
     link: {
         color: palette.primary.main,
+    },
+    shareText: {
+        fontSize: "12px",
+        fontWeight: 600
     }
+    
 })
 
 export default withStyles(styles)(FeaturedCollectionSecond)
