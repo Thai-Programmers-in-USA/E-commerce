@@ -28,8 +28,8 @@ const FeaturedCategories = () => {
             <Grid container spacing={2}>
                 {featureCategoryData.map((feature, idx) => (
                     <Grid item 
+                    key={ feature.id }
                     sm={ categoryStyleOptions[idx].size} 
-                    key={feature.data.title}
                     >
                         <FeaturedCard 
                             featureData={ feature } 

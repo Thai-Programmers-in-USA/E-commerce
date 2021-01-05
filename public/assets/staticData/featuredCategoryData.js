@@ -1,7 +1,6 @@
 const featuredCategoryData = [
-  {
-      itemSize : 8,
-      itemStyle: '',
+    {
+      id : '2nirewqi4',
       data: {
           title: '800+ New Arraival',
           desc: 'Discover the latest designer, modern and contemporary furniture and accessories from around the world.',
@@ -9,10 +8,9 @@ const featuredCategoryData = [
           linkName: 'Shop New Arrivals',
           linkURL: ''
       }
-  },
-  {
-      itemSize : 4,
-      itemStyle: '',
+    },
+    {
+      id : 'irh49dm8n',
       data: {
           title: 'Diner Party Ready',
           desc: 'Impress your guests with our fashionable, functional dining sets and tableware.',
@@ -20,10 +18,9 @@ const featuredCategoryData = [
           linkName: 'Shop Dining',
           linkURL: ''
       }
-  },
-  {
-      itemSize : 4,
-      itemStyle: '',
+    },
+    {
+      id : 'j9ttnfw9s',
       data: {
           title: 'Mid-Summer Upholstery Sale',
           desc: 'Up to 50% off every sofa and every chair, in every fabric or every leather.',
@@ -31,10 +28,9 @@ const featuredCategoryData = [
           linkName: 'Shop Sale',
           linkURL: ''
       }
-  },
-  {
-      itemSize : 8,
-      itemStyle: '',
+    },
+    {
+      id : 'm8r43cjwk',
       data: {
           title: 'Ligh Up the Room',
           desc: 'Featuring the latest looks in modern lighting, our curated  interior lighting can help transform the rooms in your home.',
@@ -42,7 +38,7 @@ const featuredCategoryData = [
           linkName: 'Shop Lighting',
           linkURL: ''
       }
-  }
-];
-
-export default featuredCategoryData; 
+    }
+  ];
+  
+  export default featuredCategoryData; 
