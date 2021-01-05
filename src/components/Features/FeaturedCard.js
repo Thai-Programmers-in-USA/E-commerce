@@ -6,12 +6,13 @@ const defaultStyles = {
   root: {
     minHeight: 260,
     // justify: "end"
+    backgroundColor: "teal"
   },
   cardContentStyle: {
     marginBottom: "25px"
   },
   typographyStyles: {
-    color: "yellow"
+    color: "white"
   },
   btnStyles: {
     color: "white", // text
@@ -25,24 +26,46 @@ const textGray = {
   }
 }
 
+const textRed = {
+  typographyStyles: {
+    color: "red"
+  }
+}
+
 const btnWhite = {
   btnStyles: {
     color: "red", // text
-    backgroundColor: "gray"
+    backgroundColor: "white"
+  }
+}
+
+const contentCenter = {
+  cardContentStyle: {
+    align: "center" // **** not working
   }
 }
 
 const styleGenertor = (syleOption) => {
   switch (syleOption) {
-    case 'option1':
+    case 'TG':
       return {
         ...defaultStyles,
         ...textGray
       };
-    case 'option2':
+    case 'TR':
+    return {
+      ...defaultStyles,
+      ...textRed
+    };
+    case 'BW':
     return {
       ...defaultStyles,
       ...btnWhite
+    };
+    case 'CT':
+    return {
+      ...defaultStyles,
+      ...contentCenter
     };
     default:
       return defaultStyles
@@ -51,7 +74,7 @@ const styleGenertor = (syleOption) => {
 
 const FeaturedCard = ({ featureData }) => {
   // passin props style
-  const featuredCardStyles = styleGenertor('option2');
+  const featuredCardStyles = styleGenertor();
   const useStyles = makeStyles(featuredCardStyles);
   const classes = useStyles();
   const { data } = featureData;
