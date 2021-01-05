@@ -28,17 +28,27 @@ const FeaturedCollectionSecond = ({classes}) => {
                 <p>Color: White</p>
                 <div className={classes.btnContainer}>
                     <FormControl className={classes.formControl}>
-                        <InputLabel id="demo-simple-select-label">Quantity</InputLabel>
+                        <Button className={classes.btnQuantity}>
+                        <InputLabel  id="demo-simple-select-label">Quantity</InputLabel>
                         <Select
-                        labelId="demo-simple-select-label"
-                        id="demo-simple-select"
-                        value={1}
-                        onChange={(e)=> console.log(e.target.value)}
+                            className={classes.selectDropDown}
+                            labelId="demo-simple-select-label"
+                            id="demo-simple-select"
+                            value={1}
+                            onChange={(e)=> console.log(e.target.value)}
                         >
-                        <MenuItem value={1}>1</MenuItem>
-                        <MenuItem value={2}>2</MenuItem>
-                        <MenuItem value={3}>3</MenuItem>
+                            <MenuItem value={1}>1</MenuItem>
+                            <MenuItem value={2}>2</MenuItem>
+                            <MenuItem value={3}>3</MenuItem>
+                            <MenuItem value={4}>4</MenuItem>
+                            <MenuItem value={5}>5</MenuItem>
+                            <MenuItem value={6}>6</MenuItem>
+                            <MenuItem value={7}>7</MenuItem>
+                            <MenuItem value={8}>8</MenuItem>
+                            <MenuItem value={9}>9</MenuItem>
+                            <MenuItem value={10}>10+</MenuItem>
                         </Select>
+                        </Button>
                     </FormControl>
                     <Button className={classes.btnAddToCart} variant="contained" color="primary">
                         <Typography className={classes.btnAddToCartText} variant="body2" component="p" gutterBottom>Add To Cart</Typography>
@@ -80,15 +90,19 @@ const styles = ({palette, breakpoints}) => ({
     },
     btnQuantity: {
         color: palette.secondary.main,
-        width: "15%",
+        width: "30%",
         height: "39px",
         marginRight: "10px"
+    },
+    selectDropDown: {
+        paddingRight: "30px",
+        padding: 0
     },
     btnAddToCart: {
         backgroundColor: palette.primary.main,
         width: "60%"
-    }
-
+    },
+    
 })
 
 export default withStyles(styles)(FeaturedCollectionSecond)
