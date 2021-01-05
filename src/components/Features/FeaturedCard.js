@@ -72,9 +72,9 @@ const styleGenertor = (syleOption) => {
   }
 }
 
-const FeaturedCard = ({ featureData }) => {
+const FeaturedCard = ({ featureData, featureStyle }) => {
   // passin props style
-  const featuredCardStyles = styleGenertor();
+  const featuredCardStyles = styleGenertor(featureStyle);
   const useStyles = makeStyles(featuredCardStyles);
   const classes = useStyles();
   const { data } = featureData;
