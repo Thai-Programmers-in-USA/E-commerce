@@ -13,6 +13,7 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
+// TODO: breakpoint at 720px - revise at sm={}
 const FeaturedCategories = () => {
     const classes = useStyles();
 
@@ -20,7 +21,7 @@ const FeaturedCategories = () => {
         <div className={classes.root}>
             <Grid container spacing={2}>
                 {featureCategoryData.map(feature => (
-                    <Grid item xs={ feature.itemSize } key={feature.data.title}>
+                    <Grid item sm={ feature.itemSize } key={feature.data.title}>
                         <FeaturedCard featureData={ feature } />
                     </Grid>
                 ))}

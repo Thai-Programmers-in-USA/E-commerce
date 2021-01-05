@@ -5,7 +5,7 @@ import { Card, CardContent, Button, Typography, makeStyles } from '@material-ui/
 const useStyles = makeStyles({
   root: {
     minHeight: 260,
-    // justifyContent: "end"
+    // justify: "end"
   },
   cardContentStyle: {
     marginBottom: "25px"
@@ -32,7 +32,7 @@ const FeaturedCard = ({ featureData }) => {
         <Typography variant="h5" component="h2">
           { data.title }
         </Typography>
-        <Typography component="p" >
+        <Typography variant="subtitle2" component="p" >
           { data.desc }
         </Typography>
          <Button variant="contained" color="primary" size="small" >{ data.linkName }</Button>
