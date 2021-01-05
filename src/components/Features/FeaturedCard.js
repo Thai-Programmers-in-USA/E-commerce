@@ -9,6 +9,10 @@ const useStyles = makeStyles({
   },
   cardContentStyle: {
     marginBottom: "25px"
+  },
+  btnStyles: {
+    color: "blue", // text
+    backgroundColor: "blue"
   }
 });
 
