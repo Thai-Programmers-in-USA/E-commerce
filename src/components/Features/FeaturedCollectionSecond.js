@@ -9,13 +9,15 @@ import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import SaleTag from '../ProductCard/SaleTag';
-
+import Icon from '../ProductCard/Icon'
 
 
 const quantity = []
 for(let i = 1; i <= 10; i++){
     quantity.push(i)
 }
+
+const color = ["white"]
 
 const FeaturedCollectionSecond = ({product, classes}) => {
 
@@ -32,9 +34,8 @@ const FeaturedCollectionSecond = ({product, classes}) => {
                 <img className={classes.img} src="https://cdn.shopify.com/s/files/1/2111/1121/products/Lenny_Wireless_Speaker_White_1000x1000.jpg?v=1569030648" />
             </div>
             <div className={classes.rightContainer}>
-                <Typography variant="h4">{product.name}</Typography>
-                <br></br>
-                <Typography variant="body2"> by <a href="/" className={classes.link}>{product.brand}</a></Typography>
+                <Typography className={classes.nameTitle} variant="subtitle2">{product.name}</Typography>
+                <Typography className={classes.brand} variant="body2"> by <a href="/" className={classes.link}>{product.brand}</a></Typography>
                 <div className={classes.priceContainer}> 
                     {product.isOnSale && 
                         <>
@@ -49,7 +50,7 @@ const FeaturedCollectionSecond = ({product, classes}) => {
                         ${finalPrice}
                     </Typography>
                 </div>
-                <p>Color: White</p>
+                <Typography className={classes.chooseColor} variant="body2" component="p">Color: {color}</Typography>
                 <div className={classes.btnContainer}>
                     <FormControl variant="outlined" className={classes.quantityContainer}>
                         <InputLabel htmlFor="outlined-age-native-simple">Quantity</InputLabel>
@@ -77,6 +78,7 @@ const FeaturedCollectionSecond = ({product, classes}) => {
                     <Typography variant="body2">View full detail</Typography>
                 </a>
                 <Typography className={classes.shareText} variant="subtitle2">share this:</Typography>
+                <Icon/>
             </div>
         </Card>
     )
@@ -106,6 +108,16 @@ const styles = ({palette, breakpoints}) => ({
         flexDirection: "column",
         justifyContent: "center",
     },
+    nameTitle: {
+        fontSize: 27,
+        fontWeight: 700,
+        color: palette.secondary.main
+    },
+    chooseColor: {
+        marginTop: "30px",
+        fontSize: 13,
+        fontWeight: 600
+    },
     textDiscount: {
         textDecoration: "line-through"
     },
@@ -134,7 +146,7 @@ const styles = ({palette, breakpoints}) => ({
     },
     btnSelect: {
         height: "40px",
-        padding: "2px"
+        padding: "6px"
     },
     btnAddToCart: {
         marginBottom: "30px",
@@ -142,12 +154,13 @@ const styles = ({palette, breakpoints}) => ({
         width: "60%",
         textTransform: "capitalize",
         fontWeight: 700,
-        marginLeft: "15px"
+        marginLeft: "25px"
     },
     link: {
         color: palette.primary.main,
     },
     shareText: {
+        marginTop: "30px",
         fontSize: "12px",
         fontWeight: 600
     }

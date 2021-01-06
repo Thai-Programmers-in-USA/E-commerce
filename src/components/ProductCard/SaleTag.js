@@ -13,7 +13,7 @@ const styles = ({palette, breakpoints}) => ({
     discountText: {
         fontSize: "13px",
         color: "white",
-        fontWeight: 700,
+        fontWeight: 600,
         backgroundColor: palette.primary.main,
         alignSelf: "flex-start",
         padding: "3px 5px",
