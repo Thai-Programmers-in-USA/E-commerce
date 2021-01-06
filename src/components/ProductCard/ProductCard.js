@@ -10,27 +10,40 @@ import SaleTag from './SaleTag'
 
 
 const ProductCard = ({product, classes}) => {
-    console.log(product);
+    let discount = 0
+    let finalPrice = product.price.toFixed(2)
+    if(product.isOnSale){
+        discount = product.price * (product.salePercentage / 100)
+        finalPrice = product.price - discount
+    }
+
     return (
-        <Card className={classes.card} variant="outlined">
-            <img src={product.img} />
-            <SaleTag />
-            <br></br>
-            <Typography className={classes.name} variant="body2" component="p" gutterBottom>
-                {product.name}
-            </Typography>
-            <Typography className={classes.brand} variant="body2" component="p" gutterBottom>
-                {product.brand}
-            </Typography>
-            <Typography className={classes.price} variant="body2" component="p" gutterBottom>
-                {product.price}
-            </Typography>
+        <Card className={classes.container} variant="outlined">
+            <img src={product.img}  className={classes.img}/>
+            <div className={classes.detailsContainer}>
+                {product.isOnSale && <SaleTag discount={discount.toFixed(2)} />}
+                <br></br>
+                <Typography className={classes.name} variant="body2" component="p" gutterBottom>
+                    {product.name}
+                </Typography>
+                <Typography className={classes.brand} variant="body2" component="p" gutterBottom>
+                    {product.brand}
+                </Typography>
+                {product.isOnSale && 
+                    <Typography className={classes.originalPrice} variant="body2" component="p" gutterBottom>
+                        ${product.price.toFixed(2)}
+                    </Typography>
+                }
+                <Typography className={classes.finalPrice} variant="body2" component="p" gutterBottom>
+                    ${finalPrice}
+                </Typography>
+            </div>
             <div className={classes.btnContainer}>
                 <Button className={classes.btnQuickShop} variant="outlined">
-                    <Typography className={classes.btnQuickShopText} variant="h6" component="p" gutterBottom>Quick shop</Typography>
+                    <Typography className={classes.btnQuickShopText} variant="h6" component="p">Quick shop</Typography>
                 </Button>
                 <Button className={classes.btnChooseOption} variant="contained" color="primary">
-                    <Typography className={classes.btnChooseOptionText} variant="h6" component="p" gutterBottom>Choose options</Typography>
+                    <Typography className={classes.btnChooseOptionText} variant="h6" component="p">Choose options</Typography>
                 </Button>
             </div>
         </Card>
@@ -43,26 +56,42 @@ ProductCard.propTypes = {
 };
 
 const styles = ({palette,breakpoints}) => ({
-    card: {
+    container: {
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
         minWidth: "280px",
         maxWidth: "300px",
         height: 420,
     },
-    price: {
-        color: palette.primary.main,
+    img: {
+        width: '240px'
+    },
+    detailsContainer: {
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "flex-start",
+        width: "100%",
+        padding: "15px"
+    },
+    originalPrice: {
+        color: palette.secondary.light,
         textAlign: "left",
-        marginLeft: "5%"
+        fontSize: "small",
+        textDecoration: "line-through"
+    },
+    finalPrice: {
+        color: palette.primary.main,
+        textAlign: "left"
     },
     name: {
         color: palette.secondary.main,
-        textAlign: "left",
-        marginLeft: "5%"
+        textAlign: "left"
     },
     brand: {
         fontSize: "small",
         color: palette.secondary.light,
-        textAlign: "left",
-        marginLeft: "5%"
+        textAlign: "left"
     },
     btnContainer: {
         marginTop: "45px",

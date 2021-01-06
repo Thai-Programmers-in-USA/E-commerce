@@ -2,29 +2,22 @@ import React from "react"
 import withStyles from '@material-ui/core/styles/withStyles';
 import Typography from '@material-ui/core/Typography';
 
-
-const SaleTag = ({classes}) => {
+const SaleTag = ({classes, discount}) => {
+    console.log(discount)
     return(
-        <div className={classes.container}>
-            <Typography variant="body2" className={classes.discountText}>Save $6.00</Typography>
-        </div>
+        <Typography variant="body2" className={classes.discountText}>Save ${discount}</Typography>
     )
 }
 
 const styles = ({palette, breakpoints}) => ({
-    container: {
-        display: "flex",
-        marginLeft: "5%",
-        justifyContent: "center",
-        alignItems: "center",
-        width: "80px",
-        height: "25px",
-        backgroundColor: palette.primary.main,
-    },
     discountText: {
-        fontSize: "small",
+        fontSize: "13px",
         color: "white",
-        fontWeight: 700
+        fontWeight: 700,
+        backgroundColor: palette.primary.main,
+        alignSelf: "flex-start",
+        padding: "3px 5px",
+        marginRight: "15px"
     }
 })
 

@@ -13,15 +13,16 @@ import FeaturedCollectionSecond from './FeaturedCollectionSecond'
         <div className={classes.container}>
             <Typography variant="subtitle2" component="p" className={classes.title}>Featured Collection</Typography>
             <div className={classes.cardsContainer}>
-                {productData.map((product, index) => 
-                    <ProductCard product={product} key={index} />
+                {productData.map((product, index) => {
+                    if(index !== productData.length-1)
+                        return <ProductCard product={product} key={index} />
+                }
                 )}
             </div>
             <br></br>
             <br></br>
-            <FeaturedCollectionSecond />
+            <FeaturedCollectionSecond product={productData[productData.length-1]}/>
         </div>
-
     )
 }
 

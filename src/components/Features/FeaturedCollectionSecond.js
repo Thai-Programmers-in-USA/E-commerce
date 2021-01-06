@@ -8,11 +8,23 @@ import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
+import SaleTag from '../ProductCard/SaleTag';
 
 
 
+const quantity = []
+for(let i = 1; i <= 10; i++){
+    quantity.push(i)
+}
 
-const FeaturedCollectionSecond = ({classes}) => {
+const FeaturedCollectionSecond = ({product, classes}) => {
+
+    let discount = 0
+    let finalPrice = product.price.toFixed(2)
+    if(product.isOnSale){
+        discount = product.price * (product.salePercentage / 100)
+        finalPrice = product.price - discount
+    }
 
     return (
         <Card className={classes.bigContainer} variant="outlined">
@@ -20,39 +32,44 @@ const FeaturedCollectionSecond = ({classes}) => {
                 <img className={classes.img} src="https://cdn.shopify.com/s/files/1/2111/1121/products/Lenny_Wireless_Speaker_White_1000x1000.jpg?v=1569030648" />
             </div>
             <div className={classes.rightContainer}>
-                <h1>Lenny Wireless Speaker</h1>
-                <p>by Elipson</p>
-                <div> 
-                    <p className={classes.textDiscount}>$500.00</p> 
-                    <p>$375.00</p>
+                <Typography variant="h4">{product.name}</Typography>
+                <br></br>
+                <Typography variant="body2"> by <a href="/" className={classes.link}>{product.brand}</a></Typography>
+                <div className={classes.priceContainer}> 
+                    {product.isOnSale && 
+                        <>
+                            <SaleTag discount={discount.toFixed(2)} />
+                        
+                            <Typography className={classes.originalPrice} variant="body2" component="p">
+                                ${product.price.toFixed(2)}
+                            </Typography>
+                        </>
+                    }
+                    <Typography className={classes.finalPrice} variant="body2" component="p">
+                        ${finalPrice}
+                    </Typography>
                 </div>
                 <p>Color: White</p>
                 <div className={classes.btnContainer}>
-                    <FormControl className={classes.formControl}>
-                        <Button className={classes.btnQuantity}>
-                        <InputLabel  id="demo-simple-select-label">Quantity</InputLabel>
+                    <FormControl variant="outlined" className={classes.formControl}>
+                        <InputLabel htmlFor="outlined-age-native-simple">Quantity</InputLabel>
                         <Select
-                            className={classes.selectDropDown}
-                            labelId="demo-simple-select-label"
-                            id="demo-simple-select"
-                            value={1}
-                            onChange={(e)=> console.log(e.target.value)}
+                        native
+                        value={1}
+                        onChange={(e)=> console.log(e.target.value)}
+                        label="Quantity"
+                        inputProps={{
+                            name: 'Quantity',
+                            id: 'outlined-age-native-simple',
+                        }}
                         >
-                            <MenuItem value={1}>1</MenuItem>
-                            <MenuItem value={2}>2</MenuItem>
-                            <MenuItem value={3}>3</MenuItem>
-                            <MenuItem value={4}>4</MenuItem>
-                            <MenuItem value={5}>5</MenuItem>
-                            <MenuItem value={6}>6</MenuItem>
-                            <MenuItem value={7}>7</MenuItem>
-                            <MenuItem value={8}>8</MenuItem>
-                            <MenuItem value={9}>9</MenuItem>
-                            <MenuItem value={10}>10+</MenuItem>
+                        {quantity.map(quantity => 
+                        <option value={quantity}>{quantity}</option>
+                        )}
                         </Select>
-                        </Button>
                     </FormControl>
                     <Button className={classes.btnAddToCart} variant="contained" color="primary">
-                        <Typography className={classes.btnAddToCartText} variant="subtitle2" component="p" gutterBottom>Add To Cart</Typography>
+                        <Typography className={classes.btnAddToCartText} variant="subtitle2" component="p">Add To Cart</Typography>
                     </Button>
                 </div>
                 <a href="/" className={classes.link}>
@@ -79,17 +96,37 @@ const styles = ({palette, breakpoints}) => ({
         display: "flex",
         flexDirection: "column",
     },
+    img: {
+        width: "570px"
+    },
     rightContainer: {
         display: "flex",
         flex: 1,
         flexDirection: "column",
         justifyContent: "center",
     },
-    img: {
-        width: "570px"
-    },
     textDiscount: {
         textDecoration: "line-through"
+    },
+    priceContainer: {
+        marginTop: "15px",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center"
+    },
+    originalPrice: {
+        color: palette.secondary.light,
+        textAlign: "left",
+        textDecoration: "line-through",
+        marginRight: "15px",
+        fontSize: "large",
+        fontWeight: 600
+    },
+    finalPrice: {
+        color: palette.primary.main,
+        textAlign: "left",
+        fontSize: "large",
+        fontWeight: 600
     },
     btnContainer: {
         marginTop: "30px"
