@@ -145,7 +145,7 @@ const styles = ({palette, breakpoints}) => ({
         marginTop: "30px"
     },
     btnSelect: {
-        height: "40px",
+        height: "37px",
         padding: "6px"
     },
     btnAddToCart: {
