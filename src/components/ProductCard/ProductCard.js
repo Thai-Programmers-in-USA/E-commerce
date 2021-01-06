@@ -4,6 +4,7 @@ import Typography from '@material-ui/core/Typography';
 import withStyles from '@material-ui/core/styles/withStyles';
 import Card from '@material-ui/core/Card';
 import Button from '@material-ui/core/Button';
+import SaleTag from './SaleTag'
 
 
 
@@ -13,7 +14,7 @@ const ProductCard = ({product, classes}) => {
     return (
         <Card className={classes.card} variant="outlined">
             <img src={product.img} />
-            <br></br>
+            <SaleTag />
             <br></br>
             <Typography className={classes.name} variant="body2" component="p" gutterBottom>
                 {product.name}
@@ -64,7 +65,7 @@ const styles = ({palette,breakpoints}) => ({
         marginLeft: "5%"
     },
     btnContainer: {
-        marginTop: "80px",
+        marginTop: "45px",
         margin: "0 auto",
         display: "flex",
         justifyContent: "center",

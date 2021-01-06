@@ -1,4 +1,3 @@
-import FeaturedCollection from "./FeaturedCollection"
 import React from 'react'
 import withStyles from '@material-ui/core/styles/withStyles';
 import Typography from '@material-ui/core/Typography';
@@ -23,7 +22,10 @@ const FeaturedCollectionSecond = ({classes}) => {
             <div className={classes.rightContainer}>
                 <h1>Lenny Wireless Speaker</h1>
                 <p>by Elipson</p>
-                <p>$500.00 Current price is $375.00</p>
+                <div> 
+                    <p className={classes.textDiscount}>$500.00</p> 
+                    <p>$375.00</p>
+                </div>
                 <p>Color: White</p>
                 <div className={classes.btnContainer}>
                     <FormControl className={classes.formControl}>
@@ -50,7 +52,7 @@ const FeaturedCollectionSecond = ({classes}) => {
                         </Button>
                     </FormControl>
                     <Button className={classes.btnAddToCart} variant="contained" color="primary">
-                        <Typography className={classes.btnAddToCartText} variant="subTitle2" component="p" gutterBottom>Add To Cart</Typography>
+                        <Typography className={classes.btnAddToCartText} variant="subtitle2" component="p" gutterBottom>Add To Cart</Typography>
                     </Button>
                 </div>
                 <a href="/" className={classes.link}>
@@ -85,6 +87,9 @@ const styles = ({palette, breakpoints}) => ({
     },
     img: {
         width: "570px"
+    },
+    textDiscount: {
+        textDecoration: "line-through"
     },
     btnContainer: {
         marginTop: "30px"
