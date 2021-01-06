@@ -9,10 +9,10 @@ const Icon = ({classes}) => {
     return(
         <div>
             <ul className={classes.iconContainer}>
-                <li className={classes.icon}><FaFacebook color='#435DAB' size='16px'/></li>
-                <li className={classes.icon}><AiFillTwitterCircle color='#0077B5' size='20px'/></li>
+                <li className={classes.icon}><FaFacebook color='#435DAB' size='20px'/></li>
+                <li className={classes.icon}><AiFillTwitterCircle color='#0077B5' size='24px'/></li>
                 <li className={classes.icon}><AiOutlineInstagram className={classes.iconIg} color='#ffffff' size='20px' border-radius='50%'/></li>
-                <li className={classes.icon}><SiPinterest color='#BD1C1B' size='16px' /></li>
+                <li className={classes.icon}><SiPinterest color='#BD1C1B' size='20px' /></li>
             </ul>
         </div>
     )
@@ -23,10 +23,11 @@ const styles = ({palette, breakpoints}) => ({
         listStyleType: "none",
         display: "flex",
         justifyContent: "center",
-        alignItems: "center"
+        alignItems: "center",
+        paddingRight: "30px"
     },
     icon: {
-        paddingRight: "10px"
+        paddingRight: "13px",
     },
     iconIg: {
         backgroundImage: "linear-gradient(to bottom right, purple, red, purple)",
