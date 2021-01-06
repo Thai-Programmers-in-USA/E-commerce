@@ -61,7 +61,7 @@ const styles = ({palette,breakpoints}) => ({
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        minWidth: "280px",
+        minWidth: "260px",
         maxWidth: "300px",
         paddingBottom: "15px"
     },
@@ -100,7 +100,7 @@ const styles = ({palette,breakpoints}) => ({
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        width: "90%"
+        width: "100%"
     },
     btnQuickShop: {
         marginTop: "25px",

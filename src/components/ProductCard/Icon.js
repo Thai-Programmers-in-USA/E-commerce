@@ -4,7 +4,6 @@ import { SiPinterest } from "react-icons/si";
 import {FaFacebook} from "react-icons/fa";
 import { AiFillTwitterCircle, AiOutlineInstagram} from "react-icons/ai";
 
-
 const Icon = ({classes}) => {
     return(
         <div>
