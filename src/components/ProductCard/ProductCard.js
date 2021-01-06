@@ -15,6 +15,7 @@ const ProductCard = ({product, classes}) => {
     if(product.isOnSale){
         discount = product.price * (product.salePercentage / 100)
         finalPrice = product.price - discount
+        finalPrice = finalPrice.toFixed(2)
     }
 
     return (
@@ -62,7 +63,7 @@ const styles = ({palette,breakpoints}) => ({
         alignItems: "center",
         minWidth: "280px",
         maxWidth: "300px",
-        height: 420,
+        paddingBottom: "15px"
     },
     img: {
         width: '240px'

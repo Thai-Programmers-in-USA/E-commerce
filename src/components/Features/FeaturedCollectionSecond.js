@@ -51,9 +51,10 @@ const FeaturedCollectionSecond = ({product, classes}) => {
                 </div>
                 <p>Color: White</p>
                 <div className={classes.btnContainer}>
-                    <FormControl variant="outlined" className={classes.formControl}>
+                    <FormControl variant="outlined" className={classes.quantityContainer}>
                         <InputLabel htmlFor="outlined-age-native-simple">Quantity</InputLabel>
                         <Select
+                        className={classes.btnSelect}
                         native
                         value={1}
                         onChange={(e)=> console.log(e.target.value)}
@@ -131,23 +132,17 @@ const styles = ({palette, breakpoints}) => ({
     btnContainer: {
         marginTop: "30px"
     },
-    btnQuantity: {
-        color: palette.secondary.main,
-        width: "30%",
-        height: "39px",
-        marginRight: "10px",
-        textTransform: "capitalize"
-    },
-    selectDropDown: {
-        paddingRight: "35px",
-        padding: 0
+    btnSelect: {
+        height: "40px",
+        padding: "2px"
     },
     btnAddToCart: {
         marginBottom: "30px",
         backgroundColor: palette.primary.main,
         width: "60%",
         textTransform: "capitalize",
-        fontWeight: 700
+        fontWeight: 700,
+        marginLeft: "15px"
     },
     link: {
         color: palette.primary.main,
@@ -156,7 +151,6 @@ const styles = ({palette, breakpoints}) => ({
         fontSize: "12px",
         fontWeight: 600
     }
-    
 })
 
 export default withStyles(styles)(FeaturedCollectionSecond)
