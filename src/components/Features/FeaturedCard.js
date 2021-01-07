@@ -72,15 +72,19 @@ const styleGenertor = (syleOption) => {
         ...btnWhite
       };
     case 'CT':
-      const contentStyle = {
+      // const contentStyle = {
+      //   cardContentStyle: {
+      //     ...defaultStyles.cardContentStyle, 
+      //     ...contentCenter.cardContentStyle
+      //   }
+      // };
+      return {
+        ...defaultStyles,
+        // ...contentStyle
         cardContentStyle: {
           ...defaultStyles.cardContentStyle, 
           ...contentCenter.cardContentStyle
-      }
-      };
-      return {
-        ...defaultStyles,
-        ...contentStyle
+        }
       };
     default:
       return defaultStyles
