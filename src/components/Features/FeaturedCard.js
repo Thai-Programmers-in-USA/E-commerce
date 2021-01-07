@@ -4,13 +4,14 @@ import { Card, CardContent, Button, Typography, makeStyles } from '@material-ui/
 
 const defaultStyles = {
   root: {
-    height: "260px",
+    // height: "260px",
     backgroundColor: "teal"
     
   },
   cardContentStyle: {
     marginBottom: "25px",
-    height: "100%",
+    // height: "100%",
+    minHeight: "260px",
     display: "flex",
     flexDirection: "column",
     justifyContent: "flex-start",

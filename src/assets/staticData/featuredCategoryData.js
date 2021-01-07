@@ -4,7 +4,7 @@ const featuredCategoryData = [
     data: {
         title: '800+ New Arraival',
         desc: 'Discover the latest designer, modern and contemporary furniture and accessories from around the world.',
-        imgURL: '',
+        imgURL: '../../assets/img/home_page/living-room_1350x636.jpg',
         linkName: 'Shop New Arrivals',
         linkURL: ''
     }
@@ -14,7 +14,7 @@ const featuredCategoryData = [
     data: {
         title: 'Diner Party Ready',
         desc: 'Impress your guests with our fashionable, functional dining sets and tableware.',
-        imgURL: '',
+        imgURL: '../../assets/img/home_page/dining_party_430x430.jpg',
         linkName: 'Shop Dining',
         linkURL: ''
     }
@@ -24,7 +24,7 @@ const featuredCategoryData = [
     data: {
         title: 'Mid-Summer Upholstery Sale',
         desc: 'Up to 50% off every sofa and every chair, in every fabric or every leather.',
-        imgURL: '',
+        imgURL: '../../assets/img/home_page/cushions_341x456.jpg',
         linkName: 'Shop Sale',
         linkURL: ''
     }
@@ -34,7 +34,7 @@ const featuredCategoryData = [
     data: {
         title: 'Ligh Up the Room',
         desc: 'Featuring the latest looks in modern lighting, our curated  interior lighting can help transform the rooms in your home.',
-        imgURL: '',
+        imgURL: '../../assets/img/home_page/lighting-image_887x417.png',
         linkName: 'Shop Lighting',
         linkURL: ''
     }

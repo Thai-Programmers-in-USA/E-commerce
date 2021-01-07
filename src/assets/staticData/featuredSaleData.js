@@ -14,7 +14,9 @@ const featuredSaleData = [ // in source
     data: {
         title: 'Up to 50% Off',
         desc: 'Home Aceessories',
-        imgURL: '../img/home_page/living-room_1350x636.jpg',
+        // this path desn't work
+        // imgURL: '../img/home_page/living-room_1350x636.jpg', 
+        imgURL: '../../assets/img/home_page/shop-accessories_665x300.png', 
         linkName: 'Shop Now',
         linkURL: ''
     }
