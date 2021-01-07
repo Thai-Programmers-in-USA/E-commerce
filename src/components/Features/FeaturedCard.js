@@ -5,7 +5,7 @@ import { Card, CardContent, Button, Typography, makeStyles } from '@material-ui/
 const defaultStyles = {
   root: {
     // height: "260px",
-    backgroundColor: "teal"
+    backgroundColor: "teal",
     
   },
   cardContentStyle: {
@@ -73,15 +73,8 @@ const styleGenertor = (syleOption) => {
         ...btnWhite
       };
     case 'CT':
-      // const contentStyle = {
-      //   cardContentStyle: {
-      //     ...defaultStyles.cardContentStyle, 
-      //     ...contentCenter.cardContentStyle
-      //   }
-      // };
       return {
         ...defaultStyles,
-        // ...contentStyle
         cardContentStyle: {
           ...defaultStyles.cardContentStyle, 
           ...contentCenter.cardContentStyle
@@ -123,7 +116,7 @@ const FeaturedCard = ({ featureData, featureStyle }) => {
         >
           { data.desc }
         </Typography>
-         <Button className={classes.btnStyles}>
+        <Button className={classes.btnStyles}>
           { data.linkName }
         </Button>
       </CardContent>

@@ -8,8 +8,9 @@ import featuredSaleData from '../../assets/staticData/featuredSaleData';
 const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,
-      backgroundColor: '#fc0303'
-    }
+      backgroundColor: '#fc0303',
+    },
+   
 }));
 
 const FeaturedSales = () => {
@@ -28,6 +29,7 @@ const FeaturedSales = () => {
                         key={ featuredSaleData[idx].id }
                         sm={ styleOption.size } 
                         xs={12}
+                        // className=" "// use breakpoint in this class
                     >
                         <FeaturedCard 
                             featureData={ featuredSaleData[idx] } 
