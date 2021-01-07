@@ -4,19 +4,25 @@ import { Card, CardContent, Button, Typography, makeStyles } from '@material-ui/
 
 const defaultStyles = {
   root: {
-    minHeight: 260,
-    // justify: "end"
+    height: "260px",
     backgroundColor: "teal"
+    
   },
   cardContentStyle: {
-    marginBottom: "25px"
+    marginBottom: "25px",
+    height: "100%",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "flex-start",
+    textAlign: "left"
   },
   typographyStyles: {
     color: "white"
   },
   btnStyles: {
-    color: "white", // text
-    backgroundColor: "red"
+    color: "white", 
+    backgroundColor: "red",
+    width: "80%"
   }
 }
 
@@ -34,14 +40,17 @@ const textRed = {
 
 const btnWhite = {
   btnStyles: {
-    color: "red", // text
+    color: "red", 
     backgroundColor: "white"
   }
 }
 
 const contentCenter = {
   cardContentStyle: {
-    align: "center" // **** not working
+    justifyContent: "center",
+    alignItems: "center",
+    marginBottom: "0",
+    textAlign: "center"
   }
 }
 
@@ -53,20 +62,26 @@ const styleGenertor = (syleOption) => {
         ...textGray
       };
     case 'TR':
-    return {
-      ...defaultStyles,
-      ...textRed
-    };
+      return {
+        ...defaultStyles,
+        ...textRed
+      };
     case 'BW':
-    return {
-      ...defaultStyles,
-      ...btnWhite
-    };
+      return {
+        ...defaultStyles,
+        ...btnWhite
+      };
     case 'CT':
-    return {
-      ...defaultStyles,
-      ...contentCenter
-    };
+      const contentStyle = {
+        cardContentStyle: {
+          ...defaultStyles.cardContentStyle, 
+          ...contentCenter.cardContentStyle
+      }
+      };
+      return {
+        ...defaultStyles,
+        ...contentStyle
+      };
     default:
       return defaultStyles
   }
@@ -81,14 +96,14 @@ const FeaturedCard = ({ featureData, featureStyle }) => {
   const bgImage = {  
     backgroundImage: `url(${data.imgURL})`,
     backgroundRepeat: "no-repeat",
-    backgroundSize: "100% auto",
+    backgroundSize: "cover",
     backgroundPosition: "center center",
     // backgroundAttachment: "fixed"
   }
   
   // TODO: make link button redirect to page
   return (
-    <Card style={bgImage} align="left" className={classes.root}>
+    <Card style={bgImage} className={classes.root}>
       <CardContent className={classes.cardContentStyle}>
         <Typography 
           className={classes.typographyStyles} 

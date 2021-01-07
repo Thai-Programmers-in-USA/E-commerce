@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
 const FeaturedSales = () => {
     const classes = useStyles();
     const saleStyleOptions = [
-        {size: 12, card: 'default'},
+        {size: 12, card: 'CT'},
         {size: 6, card: 'TR'},
         {size: 6, card: 'TR'}, 
     ]
@@ -26,7 +26,8 @@ const FeaturedSales = () => {
                 {saleStyleOptions.map((styleOption, idx) => (
                     <Grid item 
                         key={ featuredSaleData[idx].id }
-                        xs={ styleOption.size } 
+                        sm={ styleOption.size } 
+                        xs={12}
                     >
                         <FeaturedCard 
                             featureData={ featuredSaleData[idx] } 
