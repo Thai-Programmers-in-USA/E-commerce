@@ -10,9 +10,9 @@ function App({classes}) {
   return (
       <MuiThemeProvider theme={theme}>
         <div className={classes.container}>
-          <Header />
+          {/* <Header /> */}
             <Home />
-          <Footer />
+          {/* <Footer /> */}
         </div>
       </MuiThemeProvider>
 

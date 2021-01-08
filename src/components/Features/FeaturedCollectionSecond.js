@@ -91,16 +91,35 @@ FeaturedCollectionSecond.propTypes = {
 const styles = ({palette, breakpoints}) => ({
     bigContainer: {
         display: "flex",
-        justifyContent: "center",
+        justifyContent: "center", 
         alignItems: "center",
-        width: "100%"
+        marginTop: "30px",
+        width: "100%",
+
+        [breakpoints.down('sm')]: {
+            // flexDirection: "column",
+            backgroundColor: "blue",
+            marginLeft: "17%",
+            maxWidth: "1150px",
+            maxHeight: "1000px"
+        }
     },
     leftContainer: {
         display: "flex",
         flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+
+        [breakpoints.down('xs')]: {
+            // backgroundColor: "red",
+            // width: "80%"
+        }
     },
     img: {
-        width: "570px"
+        maxWidth: "570px",
+        [breakpoints.down('sm')]: {
+            maxWidth: "450px"
+        }
     },
     rightContainer: {
         display: "flex",

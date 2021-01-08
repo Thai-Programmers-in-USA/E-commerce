@@ -7,8 +7,8 @@ import withStyles from '@material-ui/core/styles/withStyles';
 const Features = ({classes}) => {
     return (
         <div className={classes.container}>
-            <FeaturedCategories />
-            <FeaturedSales />
+            {/* <FeaturedCategories />
+            <FeaturedSales /> */}
             <FeaturedCollection />
         </div>
     )

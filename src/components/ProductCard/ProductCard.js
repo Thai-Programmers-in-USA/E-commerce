@@ -61,9 +61,9 @@ const styles = ({palette,breakpoints}) => ({
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        minWidth: "260px",
+        minWidth: "280px",
         maxWidth: "300px",
-        paddingBottom: "15px"
+        paddingBottom: "15px",
     },
     img: {
         width: '240px'

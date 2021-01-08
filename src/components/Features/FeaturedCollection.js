@@ -19,8 +19,6 @@ import FeaturedCollectionSecond from './FeaturedCollectionSecond'
                 }
                 )}
             </div>
-            <br></br>
-            <br></br>
             <FeaturedCollectionSecond product={productData[productData.length-1]}/>
         </div>
     )
@@ -31,12 +29,25 @@ const styles = ({palette, breakpoints}) => ({
         display: "flex",
         justifyContent: "center",
         alignItems: "stretch",
-        flexDirection: "column"
+        flexDirection: "column",
+        backgroundColor: "yellow",
+
+        [breakpoints.down('sm')]: {
+            display: 'flex',
+            justifyContent:'center',
+            alignItems: 'center',
+        }
     },
     cardsContainer: {
         display: "flex",
         justifyContent: "space-between",
-        alignItems: "center"
+        alignItems: "center",
+
+        [breakpoints.down('sm')]: {
+           overflowX: "scroll",
+           justifyContent: "center",
+           width: "90%"
+        }
     },
     title: {
         fontSize: 20,
