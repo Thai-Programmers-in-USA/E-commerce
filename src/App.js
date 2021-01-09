@@ -29,6 +29,9 @@ const styles = ({palette, breakpoints, spacing,typography}) => ({
       flexDirection: "column",
       alignItems: "center",
       justifyContent: "flex-start",
+      [breakpoints.up('sm')]: {
+        width: "70%",
+      },
       [breakpoints.up('md')]: {
         width: "90%",
         padding: '20px',

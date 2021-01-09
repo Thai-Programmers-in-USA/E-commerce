@@ -97,11 +97,8 @@ const styles = ({palette, breakpoints}) => ({
         width: "100%",
 
         [breakpoints.down('sm')]: {
-            // flexDirection: "column",
-            backgroundColor: "blue",
-            marginLeft: "17%",
-            maxWidth: "1150px",
-            maxHeight: "1000px"
+            flexDirection: "column",
+            width: "100%",
         }
     },
     leftContainer: {
@@ -110,15 +107,15 @@ const styles = ({palette, breakpoints}) => ({
         justifyContent: "center",
         alignItems: "center",
 
-        [breakpoints.down('xs')]: {
-            // backgroundColor: "red",
-            // width: "80%"
+        [breakpoints.down('sm')]: {
+            backgroundColor: "red",
         }
     },
     img: {
         maxWidth: "570px",
         [breakpoints.down('sm')]: {
-            maxWidth: "450px"
+            marginLeft: "70px",
+            maxWidth: "65%"
         }
     },
     rightContainer: {

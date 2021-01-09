@@ -33,20 +33,17 @@ const styles = ({palette, breakpoints}) => ({
         backgroundColor: "yellow",
 
         [breakpoints.down('sm')]: {
-            display: 'flex',
-            justifyContent:'center',
             alignItems: 'center',
         }
     },
     cardsContainer: {
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
+        display: "grid",
+        gridTemplateColumns: "repeat(5, 1fr)",
+        gap: "10px",
 
         [breakpoints.down('sm')]: {
            overflowX: "scroll",
-           justifyContent: "center",
-           width: "90%"
+           width: "100%",
         }
     },
     title: {

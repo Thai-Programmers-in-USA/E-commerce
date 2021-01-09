@@ -20,8 +20,8 @@ const ProductCard = ({product, classes}) => {
 
     return (
         <Card className={classes.container} variant="outlined">
-            <img src={product.img}  className={classes.img}/>
             <div className={classes.detailsContainer}>
+                <img src={product.img}  className={classes.img}/>
                 {product.isOnSale && <SaleTag discount={discount.toFixed(2)} />}
                 <br></br>
                 <Typography className={classes.name} variant="body2" component="p" gutterBottom>
@@ -60,13 +60,19 @@ const styles = ({palette,breakpoints}) => ({
     container: {
         display: "flex",
         flexDirection: "column",
-        alignItems: "center",
-        minWidth: "280px",
-        maxWidth: "300px",
+        alignItems: "space-between",
+        justifyContent: "space-between",
         paddingBottom: "15px",
+
+        [breakpoints.down('sm')]: {
+            width: "280px",
+            display: "inline-flex",
+            padding: "10px"
+        }
     },
     img: {
-        width: '240px'
+        width: '240px',
+        alignSelf: "center"
     },
     detailsContainer: {
         display: "flex",
@@ -100,13 +106,20 @@ const styles = ({palette,breakpoints}) => ({
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        width: "100%"
+        width: "100%",
+
+        [breakpoints.down("lg")]: {
+            flexDirection: "column"
+        }
+    
     },
     btnQuickShop: {
-        marginTop: "25px",
-        marginRight: "10px",
         padding: "0 20px",
-        height: "40px"
+        height: "40px",
+
+        [breakpoints.down('lg')]: {
+            width: "85%"
+        }
     },
     btnQuickShopText: {
         textTransform: "capitalize",
@@ -118,6 +131,12 @@ const styles = ({palette,breakpoints}) => ({
         marginTop: "25px",
         padding: "0 20px",
         height: "40px",
+
+        [breakpoints.down('lg')]: {
+            width: "85%",
+            marginTop: "15px"
+        }
+        
     },
     btnChooseOptionText: {
         textTransform: "capitalize",
