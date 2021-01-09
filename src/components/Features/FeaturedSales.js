@@ -5,12 +5,14 @@ import Grid from '@material-ui/core/Grid';
 import FeaturedCard from './FeaturedCard';
 import featuredSaleData from '../../assets/staticData/featuredSaleData';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(({palette,breakpoints}) => ({
     root: {
       flexGrow: 1,
       backgroundColor: '#fc0303',
     },
-   
+    cardItem:  {
+        
+    }
 }));
 
 const FeaturedSales = () => {

@@ -5,8 +5,7 @@ import { Card, CardContent, Button, Typography, makeStyles } from '@material-ui/
 const defaultStyles = {
   root: {
     // height: "260px",
-    backgroundColor: "teal",
-    
+    borderRadius: 0
   },
   cardContentStyle: {
     marginBottom: "25px",
@@ -15,15 +14,18 @@ const defaultStyles = {
     display: "flex",
     flexDirection: "column",
     justifyContent: "flex-start",
+    alignItems: "flex-start",
     textAlign: "left"
   },
   typographyStyles: {
     color: "white"
   },
   btnStyles: {
-    color: "white", 
-    backgroundColor: "red",
-    width: "80%"
+    // color: "white", 
+    // backgroundColor: "red",
+    // width: "80%"
+    textTransform: "capitalize",
+    fontWeight: "600"
   }
 }
 
@@ -42,7 +44,8 @@ const textRed = {
 const btnWhite = {
   btnStyles: {
     color: "red", 
-    backgroundColor: "white"
+    backgroundColor: "white",
+    textTransform: "capitalize"
   }
 }
 
@@ -104,6 +107,8 @@ const FeaturedCard = ({ featureData, featureStyle }) => {
     <Card style={bgImage} className={classes.root}>
       <CardContent className={classes.cardContentStyle}>
         <Typography 
+        // TODO: setup class for title typographyStyles
+        // fontWeight: "700"
           className={classes.typographyStyles} 
           variant="h5" 
           component="h2"
@@ -111,12 +116,14 @@ const FeaturedCard = ({ featureData, featureStyle }) => {
           { data.title }
         </Typography>
         <Typography 
+        // TODO: setup class for desc typographyStyles
           className={classes.typographyStyles} variant="subtitle2" 
           component="p" 
         >
           { data.desc }
+          {/* TODO: setup class for button typographyStyles */}
         </Typography>
-        <Button className={classes.btnStyles}>
+        <Button variant="contained" color="primary" className={classes.btnStyles}>
           { data.linkName }
         </Button>
       </CardContent>
