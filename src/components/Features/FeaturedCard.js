@@ -20,10 +20,16 @@ const defaultStyles = {
   typographyStyles: {
     color: "white"
   },
+  _typoTitleStyles: {
+    fontWeight: "700"
+  },
+  _typoDesceStyles: {
+    fontSize: "12px"
+  },
+  _typoBtnStyles: {
+    fontSize: "12px"
+  },
   btnStyles: {
-    // color: "white", 
-    // backgroundColor: "red",
-    // width: "80%"
     textTransform: "capitalize",
     fontWeight: "600"
   }
@@ -107,23 +113,22 @@ const FeaturedCard = ({ featureData, featureStyle }) => {
     <Card style={bgImage} className={classes.root}>
       <CardContent className={classes.cardContentStyle}>
         <Typography 
-        // TODO: setup class for title typographyStyles
-        // fontWeight: "700"
-          className={classes.typographyStyles} 
-          variant="h5" 
+          className={`${classes.typographyStyles} ${classes._typoTitleStyles}`} 
           component="h2"
         >
           { data.title }
         </Typography>
         <Typography 
-        // TODO: setup class for desc typographyStyles
-          className={classes.typographyStyles} variant="subtitle2" 
+          className={`${classes.typographyStyles} ${classes._typoDesceStyles}`} 
           component="p" 
         >
           { data.desc }
-          {/* TODO: setup class for button typographyStyles */}
         </Typography>
-        <Button variant="contained" color="primary" className={classes.btnStyles}>
+        <Button 
+          className={`${classes.btnStyles} ${classes._typoDesceStyles}`}
+          variant="contained" 
+          color="primary"
+        >
           { data.linkName }
         </Button>
       </CardContent>
