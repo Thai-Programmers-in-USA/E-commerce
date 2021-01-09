@@ -62,12 +62,12 @@ const styles = ({palette,breakpoints}) => ({
         flexDirection: "column",
         alignItems: "space-between",
         justifyContent: "space-between",
-        paddingBottom: "15px",
+        padding: "20px",
 
         [breakpoints.down('sm')]: {
             width: "280px",
             display: "inline-flex",
-            padding: "10px"
+            // padding: "10px"
         }
     },
     img: {
@@ -104,7 +104,7 @@ const styles = ({palette,breakpoints}) => ({
         marginTop: "45px",
         margin: "0 auto",
         display: "flex",
-        justifyContent: "center",
+        justifyContent: "space-between",
         alignItems: "center",
         width: "100%",
 
@@ -114,11 +114,12 @@ const styles = ({palette,breakpoints}) => ({
     
     },
     btnQuickShop: {
+        marginTop: "25px",
         padding: "0 20px",
         height: "40px",
 
         [breakpoints.down('lg')]: {
-            width: "85%"
+            width: "100%"
         }
     },
     btnQuickShopText: {
@@ -133,7 +134,7 @@ const styles = ({palette,breakpoints}) => ({
         height: "40px",
 
         [breakpoints.down('lg')]: {
-            width: "85%",
+            width: "100%",
             marginTop: "15px"
         }
         

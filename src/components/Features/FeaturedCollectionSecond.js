@@ -108,13 +108,12 @@ const styles = ({palette, breakpoints}) => ({
         alignItems: "center",
 
         [breakpoints.down('sm')]: {
-            backgroundColor: "red",
+            // backgroundColor: "red",
         }
     },
     img: {
         maxWidth: "570px",
         [breakpoints.down('sm')]: {
-            marginLeft: "70px",
             maxWidth: "65%"
         }
     },
