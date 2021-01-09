@@ -5,11 +5,10 @@ import Card from '@material-ui/core/Card';
 import PropTypes from 'prop-types';
 import Button from '@material-ui/core/Button';
 import InputLabel from '@material-ui/core/InputLabel';
-import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import SaleTag from '../ProductCard/SaleTag';
-import Icon from '../ProductCard/Icon'
+import SocialIcon from '../ProductCard/SocialIcon';
 
 
 const quantity = []
@@ -77,8 +76,7 @@ const FeaturedCollectionSecond = ({product, classes}) => {
                 <a href="/" className={classes.link}>
                     <Typography variant="body2">View full detail</Typography>
                 </a>
-                <Typography className={classes.shareText} variant="subtitle2">share this:</Typography>
-                <Icon/>
+                <SocialIcon/>
             </div>
         </Card>
     )
@@ -173,11 +171,6 @@ const styles = ({palette, breakpoints}) => ({
     },
     link: {
         color: palette.primary.main,
-    },
-    shareText: {
-        marginTop: "30px",
-        fontSize: "12px",
-        fontWeight: 600
     }
 })
 
