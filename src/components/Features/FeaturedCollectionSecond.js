@@ -16,7 +16,7 @@ for(let i = 1; i <= 10; i++){
     quantity.push(i)
 }
 
-const color = ["white"]
+const color = ["White"]
 
 const FeaturedCollectionSecond = ({product, classes}) => {
 
@@ -74,7 +74,7 @@ const FeaturedCollectionSecond = ({product, classes}) => {
                     </Button>
                 </div>
                 <a href="/" className={classes.link}>
-                    <Typography variant="body2">View full detail</Typography>
+                    <Typography className={classes.fullDetailText}variant="body2">View full detail</Typography>
                 </a>
                 <SocialIcon/>
             </div>
@@ -112,7 +112,8 @@ const styles = ({palette, breakpoints}) => ({
     img: {
         maxWidth: "570px",
         [breakpoints.down('sm')]: {
-            maxWidth: "65%"
+            marginTop: "30px",
+            maxWidth: "90%"
         }
     },
     rightContainer: {
@@ -124,12 +125,33 @@ const styles = ({palette, breakpoints}) => ({
     nameTitle: {
         fontSize: 27,
         fontWeight: 700,
-        color: palette.secondary.main
+        color: palette.secondary.main,
+
+        [breakpoints.down('sm')]: {
+            fontSize: 22,
+            fontWeight: 900
+        }
+    },
+    brand: {
+        color: palette.secondary.light,
+
+        [breakpoints.down('sm')]: {
+            fontSize: 14,
+        }
     },
     chooseColor: {
         marginTop: "30px",
         fontSize: 13,
-        fontWeight: 600
+        fontWeight: 600,
+
+        [breakpoints.down('sm')]: {
+            fontSize: 16,
+        }
+    },
+    fullDetailText: {
+        [breakpoints.down('sm')]: {
+            fontSize: 15,
+        }
     },
     textDiscount: {
         textDecoration: "line-through"
@@ -145,14 +167,14 @@ const styles = ({palette, breakpoints}) => ({
         textAlign: "left",
         textDecoration: "line-through",
         marginRight: "15px",
-        fontSize: "large",
-        fontWeight: 600
+        fontSize: 20,
+        fontWeight: 400
     },
     finalPrice: {
         color: palette.primary.main,
         textAlign: "left",
-        fontSize: "large",
-        fontWeight: 600
+        fontSize: 20,
+        fontWeight: 400
     },
     btnContainer: {
         marginTop: "30px"

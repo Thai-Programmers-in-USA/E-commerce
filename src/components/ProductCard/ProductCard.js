@@ -67,7 +67,6 @@ const styles = ({palette,breakpoints}) => ({
         [breakpoints.down('sm')]: {
             width: "280px",
             display: "inline-flex",
-            // padding: "10px"
         }
     },
     img: {

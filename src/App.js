@@ -32,6 +32,9 @@ const styles = ({palette, breakpoints, spacing,typography}) => ({
       [breakpoints.up('sm')]: {
         width: "70%",
       },
+      [breakpoints.down('sm')]: {
+        width: "100%",
+      },
       [breakpoints.up('md')]: {
         width: "90%",
         padding: '20px',

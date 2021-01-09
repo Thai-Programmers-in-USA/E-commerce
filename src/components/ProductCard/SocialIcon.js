@@ -12,16 +12,16 @@ const SocialIcon = ({classes}) => {
         <div className={classes.container}>
             <Typography className={classes.shareText} variant="subtitle2">share this:</Typography>
             <ul className={classes.iconContainer}>
-                <IconButton>
+                <IconButton className={classes.iconItem}>
                     <li className={classes.icon}><FaFacebook color='#435DAB' size='20px'/></li>
                 </IconButton>
-                <IconButton>
+                <IconButton className={classes.iconItem}>
                     <li className={classes.icon}><AiFillTwitterCircle color='#0077B5' size='24px'/></li>
                 </IconButton>
-                <IconButton>
+                <IconButton className={classes.iconItem}>
                     <li className={classes.icon}><AiOutlineInstagram className={classes.iconIg} color='#ffffff' size='20px' border-radius='50%'/></li>
                 </IconButton>
-                <IconButton>
+                <IconButton className={classes.iconItem}>
                     <li className={classes.icon}><SiPinterest color='#BD1C1B' size='20px' /></li>
                 </IconButton>
             </ul>
@@ -38,6 +38,10 @@ const styles = ({palette, breakpoints}) => ({
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+
+        // [breakpoints.down('sm')]: {
+        //     width: "100%"
+        // }
     },
     icon: {
         display: "flex",
@@ -51,7 +55,17 @@ const styles = ({palette, breakpoints}) => ({
     shareText: {
         marginTop: "30px",
         fontSize: "12px",
-        fontWeight: 600
+        fontWeight: 600,
+
+        [breakpoints.down('sm')]: {
+            marginTop: "15px",
+            fontSize: 14,
+        }
+    },
+    iconItem: {
+        // [breakpoints.down('sm')]: {
+        //     padding: 0,
+        // }
     }
 })
 
