@@ -64,10 +64,11 @@ const styles = ({palette,breakpoints}) => ({
         justifyContent: "space-between",
         padding: "20px",
 
-        "&:hover $btnContainer": {
-            visibility: "visible",
+        [breakpoints.up('md')]: {
+            "&:hover $btnContainer": {
+                visibility: "visible",
+            },
         },
-
         [breakpoints.down('sm')]: {
             width: "280px",
             display: "inline-flex",
@@ -82,7 +83,11 @@ const styles = ({palette,breakpoints}) => ({
         flexDirection: "column",
         justifyContent: "flex-start",
         width: "100%",
-        padding: "15px",
+        padding: "5px",
+
+        [breakpoints.down('sm')]: {
+            height: "100%",
+        },
 
     },
     originalPrice: {
@@ -105,22 +110,19 @@ const styles = ({palette,breakpoints}) => ({
         textAlign: "left"
     },
     btnContainer: {
-        visibility: "hidden",
-
-       
-        marginTop: "45px",
         margin: "0 auto",
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
         width: "100%",
         height:"100px",
-       
 
+        [breakpoints.up("md")]: {
+            visibility: "hidden",
+        },
         [breakpoints.down("lg")]: {
             flexDirection: "column"
         }
-    
     },
     btnQuickShop: {
         marginTop: "25px",
