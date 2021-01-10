@@ -70,7 +70,7 @@ const FeaturedCollectionSecond = ({product, classes}) => {
                         </Select>
                     </FormControl>
                     <Button className={classes.btnAddToCart} variant="contained" color="primary">
-                        <Typography className={classes.btnAddToCartText} variant="subtitle2" component="p">Add To Cart</Typography>
+                        <Typography className={classes.btnAddToCartText} variant="subtitle2" component="p">Add to cart</Typography>
                     </Button>
                 </div>
                 <a href="/" className={classes.link}>
@@ -177,11 +177,21 @@ const styles = ({palette, breakpoints}) => ({
         fontWeight: 400
     },
     btnContainer: {
-        marginTop: "30px"
+        marginTop: "30px",
+        width: "1200px",
+
+        [breakpoints.down('sm')]: {
+            width: "800px",
+        }
     },
     btnSelect: {
         height: "37px",
-        padding: "6px"
+        padding: "6px",
+
+        [breakpoints.down('sm')]: {
+            width: "115px",
+            height: "47px"
+        }
     },
     btnAddToCart: {
         marginBottom: "30px",
@@ -189,7 +199,18 @@ const styles = ({palette, breakpoints}) => ({
         width: "60%",
         textTransform: "capitalize",
         fontWeight: 700,
-        marginLeft: "25px"
+        marginLeft: "25px",
+
+        [breakpoints.down('sm')]: {
+            height: "47px",
+            marginLeft: "10px"
+        }
+    },
+    btnAddToCartText: {
+        [breakpoints.down('sm')]: {
+            textTransform: "None",
+            fontWeight: 600
+        }
     },
     link: {
         color: palette.primary.main,
