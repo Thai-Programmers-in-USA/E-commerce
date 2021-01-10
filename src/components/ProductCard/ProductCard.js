@@ -4,9 +4,8 @@ import Typography from '@material-ui/core/Typography';
 import withStyles from '@material-ui/core/styles/withStyles';
 import Card from '@material-ui/core/Card';
 import Button from '@material-ui/core/Button';
-import SaleTag from './SaleTag'
-
-
+import SaleTag from './SaleTag';
+import { NoEncryption } from '@material-ui/icons';
 
 
 const ProductCard = ({product, classes}) => {
@@ -17,6 +16,7 @@ const ProductCard = ({product, classes}) => {
         finalPrice = product.price - discount
         finalPrice = finalPrice.toFixed(2)
     }
+
 
     return (
         <Card className={classes.container} variant="outlined">
@@ -64,10 +64,14 @@ const styles = ({palette,breakpoints}) => ({
         justifyContent: "space-between",
         padding: "20px",
 
+        "&:hover $btnContainer": {
+            visibility: "visible",
+        },
+
         [breakpoints.down('sm')]: {
             width: "280px",
             display: "inline-flex",
-        }
+        },
     },
     img: {
         width: '240px',
@@ -78,7 +82,8 @@ const styles = ({palette,breakpoints}) => ({
         flexDirection: "column",
         justifyContent: "flex-start",
         width: "100%",
-        padding: "15px"
+        padding: "15px",
+
     },
     originalPrice: {
         color: palette.secondary.light,
@@ -100,12 +105,17 @@ const styles = ({palette,breakpoints}) => ({
         textAlign: "left"
     },
     btnContainer: {
+        visibility: "hidden",
+
+       
         marginTop: "45px",
         margin: "0 auto",
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
         width: "100%",
+        height:"100px",
+       
 
         [breakpoints.down("lg")]: {
             flexDirection: "column"
@@ -143,8 +153,10 @@ const styles = ({palette,breakpoints}) => ({
         color: "white",
         fontSize: "11px",
         fontWeight: 700,
-    }
+    } 
 })
   
 
 export default withStyles(styles)(ProductCard);
+
+

@@ -41,10 +41,10 @@ const styles = ({palette, breakpoints}) => ({
         display: "grid",
         gridTemplateColumns: "repeat(5, 1fr)",
         gap: "10px",
+        width: "100%",
 
         [breakpoints.down('sm')]: {
            overflowX: "scroll",
-           width: "100%",
         }
     },
     title: {
