@@ -140,7 +140,8 @@ const styles = ({palette, breakpoints}) => ({
         color: palette.secondary.main,
 
         [breakpoints.down('sm')]: {
-            
+            fontSize: 23,
+            fontWeight: 900,
         }
     },
     brand: {
@@ -192,9 +193,10 @@ const styles = ({palette, breakpoints}) => ({
         marginTop: "20px",
         width: "100%",
 
-        [breakpoints.down('sm')]: {
-            width: "100%",
-        }
+        [breakpoints.down('xs')]: {
+            display: "flex",
+            justifyContent: "center",
+        },
     },
     btnSelect: {
         height: "37px",
@@ -214,7 +216,7 @@ const styles = ({palette, breakpoints}) => ({
         marginBottom: "25px",
 
         [breakpoints.down('sm')]: {
-            width: "200px",
+            width: "300px",
             height: "47px",
             marginLeft: "10px"
         }
