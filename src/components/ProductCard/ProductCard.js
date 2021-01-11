@@ -142,6 +142,10 @@ const styles = ({palette,breakpoints}) => ({
         fontSize: "11px",
         fontWeight: 700,
         color: palette.primary.main,
+
+        [breakpoints.down('sm')]: {
+            fontSize: "12px",
+        }
     },
     btnChooseOption: {
         marginTop: "25px",
@@ -159,6 +163,10 @@ const styles = ({palette,breakpoints}) => ({
         color: "white",
         fontSize: "11px",
         fontWeight: 700,
+
+        [breakpoints.down('sm')]: {
+            fontSize: "12px",
+        }
     } 
 })
   
