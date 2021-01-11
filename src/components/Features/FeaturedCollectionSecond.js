@@ -94,7 +94,7 @@ const styles = ({palette, breakpoints}) => ({
         marginTop: "30px",
         width: "100%",
 
-        [breakpoints.down('sm')]: {
+        [breakpoints.down('xs')]: {
             flexDirection: "column",
             width: "100%",
         }
@@ -106,11 +106,12 @@ const styles = ({palette, breakpoints}) => ({
         alignItems: "center",
 
         [breakpoints.down('sm')]: {
-            // backgroundColor: "red",
+            maxWidth: "50%"
         }
     },
     img: {
         maxWidth: "600px",
+
         [breakpoints.down('sm')]: {
             marginTop: "30px",
             maxWidth: "90%"
@@ -121,31 +122,36 @@ const styles = ({palette, breakpoints}) => ({
         flex: 1,
         flexDirection: "column",
         justifyContent: "center",
+        marginTop: "65px",
+
+        [breakpoints.down('sm')]: {
+            width: "50%"
+        }
     },
     nameTitle: {
         fontSize: 27,
-        fontWeight: 700,
+        fontWeight: 900,
         color: palette.secondary.main,
 
         [breakpoints.down('sm')]: {
-            fontSize: 22,
-            fontWeight: 900
+            
         }
     },
     brand: {
         color: palette.secondary.light,
+        marginTop: '8px',
 
         [breakpoints.down('sm')]: {
             fontSize: 14,
         }
     },
     chooseColor: {
-        marginTop: "30px",
+        marginTop: "16px",
         fontSize: 13,
         fontWeight: 600,
 
         [breakpoints.down('sm')]: {
-            fontSize: 16,
+            fontSize: 14,
         }
     },
     fullDetailText: {
@@ -177,7 +183,7 @@ const styles = ({palette, breakpoints}) => ({
         fontWeight: 400
     },
     btnContainer: {
-        marginTop: "30px",
+        marginTop: "20px",
         width: "100%",
 
         [breakpoints.down('sm')]: {
@@ -189,17 +195,17 @@ const styles = ({palette, breakpoints}) => ({
         padding: "6px",
 
         [breakpoints.down('sm')]: {
-            width: "100px",
+            width: "110px",
             height: "47px"
         }
     },
     btnAddToCart: {
-        marginBottom: "30px",
         backgroundColor: palette.primary.main,
         width: "50%",
         textTransform: "capitalize",
         fontWeight: 700,
         marginLeft: "25px",
+        marginBottom: "25px",
 
         [breakpoints.down('sm')]: {
             width: "200px",

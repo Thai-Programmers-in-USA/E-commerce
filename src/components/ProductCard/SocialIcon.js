@@ -10,19 +10,19 @@ import { AiFillTwitterCircle, AiOutlineInstagram} from "react-icons/ai";
 const SocialIcon = ({classes}) => {
     return(
         <div className={classes.container}>
-            <Typography className={classes.shareText} variant="subtitle2">share this:</Typography>
+            <Typography className={classes.shareText} variant="subtitle2">Share this:</Typography>
             <ul className={classes.iconContainer}>
                 <IconButton className={classes.iconItem}>
-                    <li className={classes.icon}><FaFacebook color='#435DAB' size='20px'/></li>
+                    <li className={classes.icon}><FaFacebook color='#435DAB' size='23px'/></li>
                 </IconButton>
                 <IconButton className={classes.iconItem}>
-                    <li className={classes.icon}><AiFillTwitterCircle color='#0077B5' size='24px'/></li>
+                    <li className={classes.icon}><AiFillTwitterCircle color='#0077B5' size='27px'/></li>
                 </IconButton>
                 <IconButton className={classes.iconItem}>
-                    <li className={classes.icon}><AiOutlineInstagram className={classes.iconIg} color='#ffffff' size='20px' border-radius='50%'/></li>
+                    <li className={classes.icon}><AiOutlineInstagram className={classes.iconIg} color='#ffffff' size='23px' border-radius='50%'/></li>
                 </IconButton>
                 <IconButton className={classes.iconItem}>
-                    <li className={classes.icon}><SiPinterest color='#BD1C1B' size='20px' /></li>
+                    <li className={classes.icon}><SiPinterest color='#BD1C1B' size='23px' /></li>
                 </IconButton>
             </ul>
         </div>
@@ -31,7 +31,8 @@ const SocialIcon = ({classes}) => {
 
 const styles = ({palette, breakpoints}) => ({
     container: {
-        marginTop: "15px"
+        marginTop: "5px",
+        marginBottom: "20px"
     },
     iconContainer: {
         listStyleType: "none",
@@ -39,14 +40,14 @@ const styles = ({palette, breakpoints}) => ({
         justifyContent: "center",
         alignItems: "center",
 
-        // [breakpoints.down('sm')]: {
-        //     width: "100%"
-        // }
+        [breakpoints.down('sm')]: {
+            marginTop: "10px"
+        }
     },
     icon: {
         display: "flex",
         justifyContent: "center",
-        alignItems: "center",
+        alignItems: "center"
     },
     iconIg: {
         backgroundImage: "linear-gradient(to bottom right, purple, red, purple)",
@@ -54,7 +55,7 @@ const styles = ({palette, breakpoints}) => ({
     },
     shareText: {
         marginTop: "30px",
-        fontSize: "12px",
+        fontSize: "14px",
         fontWeight: 600,
 
         [breakpoints.down('sm')]: {
@@ -63,9 +64,13 @@ const styles = ({palette, breakpoints}) => ({
         }
     },
     iconItem: {
-        // [breakpoints.down('sm')]: {
-        //     padding: 0,
-        // }
+        padding: 0,
+        marginTop: "10px",
+        marginRight: "9px",
+
+        [breakpoints.down('sm')]: {
+            marginTop: 0,
+        }
     }
 })
 
