@@ -23,7 +23,6 @@ const ProductCard = ({product, classes}) => {
             <div className={classes.detailsContainer}>
                 <img src={product.img}  className={classes.img}/>
                 {product.isOnSale && <SaleTag discount={discount.toFixed(2)} />}
-                <br></br>
                 <Typography className={classes.name} variant="body2" component="p" gutterBottom>
                     {product.name}
                 </Typography>
@@ -71,13 +70,17 @@ const styles = ({palette,breakpoints}) => ({
         },
         [breakpoints.down('sm')]: {
             width: "220px",
-            height: "530px",
+            height: "450px",
             display: "inline-flex",
         },
     },
     img: {
         width: '240px',
-        alignSelf: "center"
+        alignSelf: "center",
+
+        [breakpoints.down('sm')]: {
+            width: "160px",
+        },
     },
     detailsContainer: {
         display: "flex",

@@ -4,7 +4,7 @@ import productData from '../ProductCard/productData'
 import withStyles from '@material-ui/core/styles/withStyles';
 import Typography from '@material-ui/core/Typography';
 import FeaturedCollectionSecond from './FeaturedCollectionSecond';
-import Card from '@material-ui/core/Card';
+// import Card from '@material-ui/core/Card';
 
 
 
@@ -14,13 +14,13 @@ import Card from '@material-ui/core/Card';
     return (
         <div className={classes.container}>
             <Typography variant="subtitle2" component="p" className={classes.title}>Featured Collection</Typography>
-            <Card className={classes.cardsContainer}>
+            <div className={classes.cardsContainer}>
                 {productData.map((product, index) => {
                     if(index !== productData.length-1)
                         return <ProductCard product={product} key={index} />
                 }
                 )}
-            </Card>
+            </div>
             <FeaturedCollectionSecond product={productData[productData.length-1]}/>
         </div>
     )

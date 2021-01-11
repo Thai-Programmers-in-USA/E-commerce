@@ -17,7 +17,8 @@ const styles = ({palette, breakpoints}) => ({
         backgroundColor: palette.primary.main,
         alignSelf: "flex-start",
         padding: "3px 5px",
-        marginRight: "15px"
+        marginRight: "15px",
+        marginBottom: "10px"
     }
 })
 
