@@ -44,7 +44,7 @@ const styles = ({palette, breakpoints}) => ({
         width: "100%",
 
         [breakpoints.down('sm')]: {
-           overflowX: "scroll",
+            overflowX: "scroll",
         }
     },
     title: {

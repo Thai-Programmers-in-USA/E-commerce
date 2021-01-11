@@ -110,7 +110,7 @@ const styles = ({palette, breakpoints}) => ({
         }
     },
     img: {
-        maxWidth: "570px",
+        maxWidth: "600px",
         [breakpoints.down('sm')]: {
             marginTop: "30px",
             maxWidth: "90%"
@@ -178,10 +178,10 @@ const styles = ({palette, breakpoints}) => ({
     },
     btnContainer: {
         marginTop: "30px",
-        width: "1200px",
+        width: "100%",
 
         [breakpoints.down('sm')]: {
-            width: "800px",
+            width: "100%",
         }
     },
     btnSelect: {
@@ -189,19 +189,20 @@ const styles = ({palette, breakpoints}) => ({
         padding: "6px",
 
         [breakpoints.down('sm')]: {
-            width: "115px",
+            width: "100px",
             height: "47px"
         }
     },
     btnAddToCart: {
         marginBottom: "30px",
         backgroundColor: palette.primary.main,
-        width: "60%",
+        width: "50%",
         textTransform: "capitalize",
         fontWeight: 700,
         marginLeft: "25px",
 
         [breakpoints.down('sm')]: {
+            width: "200px",
             height: "47px",
             marginLeft: "10px"
         }

@@ -70,7 +70,8 @@ const styles = ({palette,breakpoints}) => ({
             },
         },
         [breakpoints.down('sm')]: {
-            width: "280px",
+            width: "220px",
+            height: "530px",
             display: "inline-flex",
         },
     },
