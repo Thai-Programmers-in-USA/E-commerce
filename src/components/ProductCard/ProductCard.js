@@ -106,7 +106,8 @@ const styles = ({palette,breakpoints}) => ({
     },
     name: {
         color: palette.secondary.main,
-        textAlign: "left"
+        textAlign: "left",
+        marginTop: "10px"
     },
     brand: {
         fontSize: "small",

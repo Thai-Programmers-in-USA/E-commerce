@@ -94,7 +94,7 @@ const styles = ({palette, breakpoints}) => ({
         marginTop: "30px",
         width: "100%",
 
-        [breakpoints.down('xs')]: {
+        [breakpoints.down('sm')]: {
             flexDirection: "column",
             width: "100%",
         }
@@ -112,9 +112,12 @@ const styles = ({palette, breakpoints}) => ({
     img: {
         maxWidth: "600px",
 
-        [breakpoints.down('sm')]: {
-            marginTop: "30px",
-            maxWidth: "90%"
+        [breakpoints.down('md')]: {
+            maxWidth: "550px",
+            marginTop: "30px"
+        },
+        [breakpoints.down('xs')]: {
+            maxWidth: "450px"
         }
     },
     rightContainer: {
@@ -126,6 +129,9 @@ const styles = ({palette, breakpoints}) => ({
 
         [breakpoints.down('sm')]: {
             width: "50%"
+        },
+        [breakpoints.down('xs')]: {
+            width: "100%"
         }
     },
     nameTitle: {
