@@ -24,7 +24,8 @@ const defaultStyles = {
   },
   _typoTitleStyles: {
     fontWeight: "800",
-    fontSize: "26px"
+    fontSize: "26px",
+    lineHeight: "1.2"
   },
   _typoDesceStyles: {
     fontSize: "15px"
