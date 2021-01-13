@@ -29,7 +29,10 @@ const FeaturedCategories = () => {
                 {categoryStyleOptions.map((styleOption, idx) => (
                     <Grid item 
                     key={ featureCategoryData[idx].id }
-                    sm={ styleOption.size} 
+                    xs={12}
+                    sm={styleOption.size} 
+                    // tabletTen={styleOption.size} 
+                    md={styleOption.size}
                     >
                         <FeaturedCard 
                             featureData={ featureCategoryData[idx] } 
