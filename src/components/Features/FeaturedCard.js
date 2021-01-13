@@ -152,6 +152,7 @@ const FeaturedCard = ({ featureData, featureStyle }) => {
 
 FeaturedCard.propTypes = {
   featureData: PropTypes.object.isRequired,
+  featureStyle: PropTypes.string.isRequired
 };
 
 export default FeaturedCard;

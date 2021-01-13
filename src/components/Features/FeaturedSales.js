@@ -9,9 +9,6 @@ const useStyles = makeStyles(({palette,breakpoints}) => ({
     root: {
       flexGrow: 1,
     },
-    cardItem:  {
-        
-    }
 }));
 
 const FeaturedSales = () => {
