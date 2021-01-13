@@ -8,7 +8,6 @@ import featuredSaleData from '../../assets/staticData/featuredSaleData';
 const useStyles = makeStyles(({palette,breakpoints}) => ({
     root: {
       flexGrow: 1,
-      backgroundColor: '#fc0303',
     },
     cardItem:  {
         
@@ -25,6 +24,7 @@ const FeaturedSales = () => {
 
     return (
         <div className={classes.root}>
+            <h2>*** PLACE HOLDER: Save Big On Popular Design ***</h2>
             <Grid container spacing={2}>
                 {saleStyleOptions.map((styleOption, idx) => (
                     <Grid item 

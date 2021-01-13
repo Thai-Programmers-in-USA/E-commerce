@@ -10,7 +10,7 @@ const defaultStyles = {
   cardContentStyle: {
     marginBottom: "25px",
     // height: "100%",
-    minHeight: "260px",
+    minHeight: "290px",
     display: "flex",
     flexDirection: "column",
     justifyContent: "flex-start",
@@ -23,8 +23,8 @@ const defaultStyles = {
     marginTop: "4px"
   },
   _typoTitleStyles: {
-    fontWeight: "700",
-    fontSize: "24px"
+    fontWeight: "800",
+    fontSize: "26px"
   },
   _typoDesceStyles: {
     fontSize: "15px"

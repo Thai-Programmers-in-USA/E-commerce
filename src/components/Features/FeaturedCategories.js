@@ -9,7 +9,6 @@ import featureCategoryData from '../../assets/staticData/featuredCategoryData';
 const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,
-      backgroundColor: '#4d4d4d'
     }
 }));
 
