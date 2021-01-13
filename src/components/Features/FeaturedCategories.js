@@ -30,7 +30,7 @@ const FeaturedCategories = () => {
                     <Grid item 
                     key={ featureCategoryData[idx].id }
                     xs={12}
-                    sm={styleOption.size} 
+                    sm={12} 
                     // tabletTen={styleOption.size} 
                     md={styleOption.size}
                     >

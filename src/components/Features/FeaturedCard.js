@@ -18,20 +18,24 @@ const defaultStyles = {
     textAlign: "left"
   },
   typographyStyles: {
-    color: "white"
+    color: "white",
+    maxWidth: "65%",
+    marginTop: "4px"
   },
   _typoTitleStyles: {
-    fontWeight: "700"
+    fontWeight: "700",
+    fontSize: "24px"
   },
   _typoDesceStyles: {
-    fontSize: "12px"
+    fontSize: "15px"
   },
   _typoBtnStyles: {
     fontSize: "12px"
   },
   btnStyles: {
     textTransform: "capitalize",
-    fontWeight: "600"
+    fontWeight: "600",
+    marginTop: "20px"
   }
 }
 
@@ -69,17 +73,26 @@ const styleGenertor = (syleOption) => {
     case 'TG':
       return {
         ...defaultStyles,
-        ...textGray
+        typographyStyles: {
+          ...defaultStyles.typographyStyles, 
+          ...textGray.typographyStyles
+        }
       };
     case 'TR':
       return {
         ...defaultStyles,
-        ...textRed
+        typographyStyles: {
+          ...defaultStyles.typographyStyles, 
+          ...textRed.typographyStyles
+        }
       };
     case 'BW':
       return {
         ...defaultStyles,
-        ...btnWhite
+        btnStyles: {
+          ...defaultStyles.btnStyles,
+          ...btnWhite.btnStyles
+        }
       };
     case 'CT':
       return {

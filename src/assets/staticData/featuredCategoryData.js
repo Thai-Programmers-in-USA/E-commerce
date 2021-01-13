@@ -32,7 +32,7 @@ const featuredCategoryData = [
   {
     id : 'm8r43cjwk',
     data: {
-        title: 'Ligh Up the Room',
+        title: 'Light Up the Room',
         desc: 'Featuring the latest looks in modern lighting, our curated  interior lighting can help transform the rooms in your home.',
         imgURL: '../../assets/img/home_page/lighting-image_887x417.png',
         linkName: 'Shop Lighting',
