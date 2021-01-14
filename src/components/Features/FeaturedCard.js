@@ -24,7 +24,7 @@ const defaultStyles = {
   },
   _typoTitleStyles: {
     fontWeight: "800",
-    fontSize: "26px",
+    fontSize: "25px",
     lineHeight: "1.2"
   },
   _typoDesceStyles: {
@@ -42,7 +42,7 @@ const defaultStyles = {
 
 const textGray = {
   typographyStyles: {
-    color: "gray"
+    color: "#4d4d4d"
   }
 }
 
