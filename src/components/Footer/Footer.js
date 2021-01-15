@@ -6,11 +6,6 @@ import withStyles from "@material-ui/core/styles/withStyles";
 import PropTypes from "prop-types";
 import Typography from "@material-ui/core/Typography";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
-import FacebookIcon from "@material-ui/icons/Facebook";
-import TwitterIcon from "@material-ui/icons/Twitter";
-import PinterestIcon from "@material-ui/icons/Pinterest";
-import InstagramIcon from "@material-ui/icons/Instagram";
-import EmailIcon from "@material-ui/icons/Email";
 import Button from '@material-ui/core/Button';
 import { SiPinterest } from "react-icons/si";
 import {FaFacebookF} from "react-icons/fa";
@@ -95,12 +90,13 @@ const Footer = ({ classes }) => {
     <div className={classes.footerContainer}>
       <div className={classes.row}>
         <div className={classes.subRow} onClick={() => handleCollapse("nav")}>
-          <Typography className={classes.footerBtn}>Navigate</Typography>
-          {isOpenCollapse.nav ? (
+        {isOpenCollapse.nav ? (
             <RemoveIcon className={classes.dropdownIcon} />
           ) : (
             <KeyboardArrowDownIcon className={classes.dropdownIcon} />
           )}
+          <Typography className={classes.footerBtn}>Navigate</Typography>
+          
           <Collapse in={isOpenCollapse.nav} timeout="auto" unmountOnExit>
             <div
               style={{ listStyle: "none", textAlign: "left" }}
@@ -120,12 +116,13 @@ const Footer = ({ classes }) => {
           </Collapse>
         </div>
         <div className={classes.subRow} onClick={() => handleCollapse("cat")}>
-          <Typography className={classes.footerBtn}>Category</Typography>
-          {isOpenCollapse.cat ? (
+        {isOpenCollapse.cat ? (
             <RemoveIcon className={classes.dropdownIcon} />
           ) : (
             <KeyboardArrowDownIcon className={classes.dropdownIcon} />
           )}
+          <Typography className={classes.footerBtn}>Category</Typography>
+         
           <Collapse in={isOpenCollapse.cat} timeout="auto" unmountOnExit>
           <div
               style={{ listStyle: "none", textAlign: "left" }}
@@ -212,11 +209,13 @@ const styles = ({ palette, breakpoints, spacing, typography }) => ({
   },
   footerBtn: {
     border: "none",
-    padding: "10px 0",
+    paddingBottom: "20px",
+    paddingTop: '15px',
     backgroundColor: "transparent",
-    fontSize: "1rem",
+    fontSize: "1.3rem",
     fontWeight: 700,
-    color: "#4d4d4d",
+    color: "#666666",
+    fontWeight: '800'
   },
   list: {
     textAlign: "left",
@@ -245,13 +244,21 @@ const styles = ({ palette, breakpoints, spacing, typography }) => ({
   followUsContainer: {
       display: 'flex',
       flexDirection: 'column',
-      alignItems: 'flex-start'
+      alignItems: 'flex-start',
+      borderBottom: "solid 1px #d3d3d3",
+      paddingBottom: '30px',
+      [breakpoints.up("sm")]: {
+        borderBottom: "none",
+      }
   },
   subscribeContainer: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'flex-start',
     borderBottom: "solid 1px #d3d3d3",
+    [breakpoints.up("sm")]: {
+      borderBottom: "none",
+    }
   },
   dropdownIcon: {
     display: "none",
@@ -259,6 +266,8 @@ const styles = ({ palette, breakpoints, spacing, typography }) => ({
       position: "absolute",
       right: 10,
       display: "inline",
+      marginTop: "10px",
+      paddingTop: '2px',
     },
   },
   signUpInput: {
@@ -292,7 +301,9 @@ const styles = ({ palette, breakpoints, spacing, typography }) => ({
     display: "flex",
     marginBottom: "10px",
     flexDirection: "column",
-    alignItems : "flex-start"
+    alignItems : "flex-start",
+    justifyContent: 'space-between',
+    height: '140px'
   },
   copyRigthDiv: {
     position: "relative",
@@ -300,7 +311,7 @@ const styles = ({ palette, breakpoints, spacing, typography }) => ({
   },
   iconButton: {
     backgroundColor: '#e6e6e6',
-    padding: '4px'
+    padding: '7px'
   }
 });
 
