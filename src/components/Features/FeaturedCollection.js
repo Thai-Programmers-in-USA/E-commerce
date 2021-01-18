@@ -46,7 +46,12 @@ const styles = ({palette, breakpoints}) => ({
         gap: "10px",
         width: "100%",
         height: "500px",
-    
+
+        // "&hover": {
+        //     height: "1200px",
+        //     position: "absolute",
+        //     zIndex: 1
+        // },
         [breakpoints.down('sm')]: {
             overflowX: "scroll",
         }

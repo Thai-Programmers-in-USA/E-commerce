@@ -39,7 +39,7 @@ const ProductCard = ({product, classes}) => {
                 </Typography>
             </div>
             <div className={classes.btnContainer}>
-                <Button className={classes.btnQuickShop} variant="outlined">
+                <Button onMouseOver={classes.delayBtn} className={classes.btnQuickShop} variant="outlined">
                     <Typography className={classes.btnQuickShopText} variant="h6" component="p">Quick shop</Typography>
                 </Button>
                 <Button className={classes.btnChooseOption} variant="contained" color="primary">
@@ -55,6 +55,7 @@ ProductCard.propTypes = {
     product: PropTypes.object.isRequired
 };
 
+
 const styles = ({palette,breakpoints}) => ({
     container: {
         display: "flex",
@@ -62,10 +63,10 @@ const styles = ({palette,breakpoints}) => ({
         alignItems: "space-between",
         justifyContent: "space-between",
         padding: "20px",
-
+        
         [breakpoints.up('md')]: {
             "&:hover $btnContainer": {
-                display: "flex"
+                display: "flex",
             },
         },
         [breakpoints.down('sm')]: {
@@ -168,7 +169,10 @@ const styles = ({palette,breakpoints}) => ({
         [breakpoints.down('sm')]: {
             fontSize: "12px",
         }
-    } 
+    },
+    delayBtn: {
+        transitionDelay: "70ms"
+    }
 })
   
 
