@@ -65,7 +65,7 @@ const styles = ({palette,breakpoints}) => ({
 
         [breakpoints.up('md')]: {
             "&:hover $btnContainer": {
-                visibility: "visible",
+                display: "flex"
             },
         },
         [breakpoints.down('sm')]: {
@@ -123,7 +123,7 @@ const styles = ({palette,breakpoints}) => ({
         height:"100px",
 
         [breakpoints.up("md")]: {
-            visibility: "hidden",
+            display: "none"
         },
         [breakpoints.down("lg")]: {
             flexDirection: "column"

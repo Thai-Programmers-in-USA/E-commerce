@@ -21,7 +21,10 @@ import FeaturedCollectionSecond from './FeaturedCollectionSecond';
                 }
                 )}
             </div>
-            <FeaturedCollectionSecond product={productData[productData.length-1]}/>
+            <div className={classes.cardsContainerBottom}>
+                <FeaturedCollectionSecond product={productData[productData.length-1]}/>
+            </div>
+           
         </div>
     )
 }
@@ -42,11 +45,13 @@ const styles = ({palette, breakpoints}) => ({
         gridTemplateColumns: "repeat(5, 1fr)",
         gap: "10px",
         width: "100%",
-
+        height: "500px",
+    
         [breakpoints.down('sm')]: {
             overflowX: "scroll",
         }
     },
+
     title: {
         fontSize: 20,
         marginBottom: "2%",

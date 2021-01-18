@@ -88,6 +88,7 @@ FeaturedCollectionSecond.propTypes = {
 
 const styles = ({palette, breakpoints}) => ({
     bigContainer: {
+        position: "relative",
         display: "flex",
         justifyContent: "center", 
         alignItems: "center",
