@@ -129,12 +129,14 @@ const FeaturedCard = ({ featureData, featureStyle }) => {
         <Typography 
           className={`${classes.typographyStyles} ${classes._typoTitleStyles}`} 
           component="h2"
+          data-testid="title"
         >
           { data.title }
         </Typography>
         <Typography 
           className={`${classes.typographyStyles} ${classes._typoDesceStyles}`} 
           component="p" 
+          data-testid="description"
         >
           { data.desc }
         </Typography>
@@ -142,6 +144,7 @@ const FeaturedCard = ({ featureData, featureStyle }) => {
           className={`${classes.btnStyles} ${classes._typoDesceStyles}`}
           variant="contained" 
           color="primary"
+          data-testid="shop-button"
         >
           { data.linkName }
         </Button>
