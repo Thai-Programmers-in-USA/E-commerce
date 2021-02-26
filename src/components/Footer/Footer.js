@@ -95,7 +95,7 @@ const Footer = ({ classes }) => {
           ) : (
             <KeyboardArrowDownIcon className={classes.dropdownIcon} />
           )}
-          <Typography className={classes.footerBtn}>Navigate</Typography>
+          <Typography className={classes.footerBtn} data-testid="footer-title">Navigate</Typography>
           
           <Collapse in={isOpenCollapse.nav} timeout="auto" unmountOnExit>
             <div
@@ -121,7 +121,7 @@ const Footer = ({ classes }) => {
           ) : (
             <KeyboardArrowDownIcon className={classes.dropdownIcon} />
           )}
-          <Typography className={classes.footerBtn}>Category</Typography>
+          <Typography className={classes.footerBtn} data-testid="footer-title">Category</Typography>
          
           <Collapse in={isOpenCollapse.cat} timeout="auto" unmountOnExit>
           <div
@@ -142,7 +142,7 @@ const Footer = ({ classes }) => {
           </Collapse>
         </div>
         <div className={classes.followUsContainer}>
-          <Typography className={classes.footerBtn}>Follow us</Typography>
+          <Typography className={classes.footerBtn} data-testid="footer-title">Follow us</Typography>
           <div className={classes.iconsContainer}>
                 <IconButton className={classes.iconButton}>
                   <FaFacebookF className={classes.iconList} color='#686868' size='20px'/>
@@ -162,7 +162,7 @@ const Footer = ({ classes }) => {
             </div>
         </div>
         <div className={classes.subscribeContainer}>
-          <Typography className={classes.footerBtn}>Subscribe</Typography>
+          <Typography className={classes.footerBtn} data-testid="footer-title">Subscribe</Typography>
           <Typography
             className={classes.textSubscribe}
             variant="subtitle1"

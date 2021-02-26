@@ -8,8 +8,8 @@ import ProductCard from '../ProductCard'
     return (
         <div>
         Featured Collection
-        {products.map(product => 
-            <ProductCard product={product} />
+        {products.map((product, index) => 
+            <ProductCard product={product} key={index} />
         )}
         </div>
     )
