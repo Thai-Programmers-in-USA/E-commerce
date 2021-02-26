@@ -17,13 +17,13 @@ const ProductCard = ({product, classes}) => {
         finalPrice = finalPrice.toFixed(2)
     }
 
-
+// const productName = "product-name"
     return (
         <Card className={classes.container} variant="outlined">
             <div className={classes.detailsContainer}>
-                <img src={product.img}  className={classes.img}/>
-                {product.isOnSale && <SaleTag discount={discount.toFixed(2)} />}
-                <Typography className={classes.name} variant="body2" component="p" gutterBottom>
+                <img src={product.img}  className={classes.img} data-testid='product_img'/>
+                {product.isOnSale && <SaleTag discount={discount.toFixed(2)}/>}
+                <Typography className={classes.name} variant="body2" component="p" gutterBottom data-testid='product_name'>
                     {product.name}
                 </Typography>
                 <Typography className={classes.brand} variant="body2" component="p" gutterBottom>
