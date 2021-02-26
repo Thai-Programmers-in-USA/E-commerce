@@ -8,16 +8,9 @@ import Footer from './Footer';
 describe('Footer', () => {
     test('Render Footer', () => {
         const {getByTestId, getAllByTestId} = render(<Footer />);
-        // const navigateTitle = getByTestId("navigate-title");
-        // expect(navigateTitle).toBeInTheDocument();
 
-
-        // expect(getByTestId("navigate-title")).toBeInTheDocument();
-        // expect(getByTestId("category-title")).toBeInTheDocument();
-        // expect(getByTestId("followUs-title")).toBeInTheDocument();
-        // expect(getByTestId("subscribe-title")).toBeInTheDocument(); 
         const footerTitle = getAllByTestId('footer-title');
         
-        expect(footerTitle.length).toBe(5); 
+        expect(footerTitle.length).toBe(4); 
     })
 })
