@@ -16,6 +16,7 @@ const FeaturedCollection = ({ classes }) => {
         {ProductData.map((product, index) => {
           if (index !== ProductData.length - 1)
             return <ProductCard product={product} key={index} />;
+          else return null;
         })}
       </div>
       <div className={classes.cardsContainerBottom}>

@@ -5,7 +5,6 @@ import withStyles from "@material-ui/core/styles/withStyles";
 import Card from "@material-ui/core/Card";
 import Button from "@material-ui/core/Button";
 import SaleTag from "./SaleTag";
-import { NoEncryption } from "@material-ui/icons";
 
 const ProductCard = ({ product, classes }) => {
   let discount = 0;
@@ -16,7 +15,6 @@ const ProductCard = ({ product, classes }) => {
     finalPrice = finalPrice.toFixed(2);
   }
 
-  // const productName = "product-name"
   return (
     <Card className={classes.container} variant="outlined">
       <div className={classes.detailsContainer}>
@@ -65,7 +63,7 @@ const ProductCard = ({ product, classes }) => {
       </div>
       <div className={classes.btnContainer}>
         <Button
-          onMouseOver={classes.delayBtn}
+          //   onMouseOver={classes.delayBtn}
           className={classes.btnQuickShop}
           variant="outlined"
         >

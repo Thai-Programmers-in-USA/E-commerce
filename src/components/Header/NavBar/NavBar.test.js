@@ -33,7 +33,7 @@ describe("NavBar", () => {
 
     expect(navLinks.length).toBe(4);
     // console.log(navLinks[0]);
-    expect(navLinks[0]).toHaveTextContent("Save $70.00");
+    expect(navLinks[0]).toHaveTextContent("Home");
     expect(navLinks[1]).toHaveTextContent("Shop");
     expect(navLinks[2]).toHaveTextContent("About");
     expect(navLinks[3]).toHaveTextContent("Contact");
