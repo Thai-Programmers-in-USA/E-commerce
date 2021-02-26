@@ -1,32 +1,37 @@
-import React from 'react'
+import React from "react";
 import withStyles from "@material-ui/core/styles/withStyles";
 import Link from "@material-ui/core/Link";
 import Typography from "@material-ui/core/Typography";
 
- const NavBar = ({classes}) => {
-    return (
-      <div className={classes.container}>
-        <Typography className={classes.typography}>
-          <Link href="#" className={classes.link}>
-            Home
-          </Link>
-          <Link href="#" className={classes.link}>
-            Shop
-          </Link>
-          <Link href="#" className={classes.link}>
-            About
-          </Link>
-          <Link href="#" className={classes.link}>
-            Contact
-          </Link>
-        </Typography>
-      </div>
-    );
-}
+const NavBar = ({ classes }) => {
+  return (
+    <div className={classes.container}>
+      <Typography className={classes.typography}>
+        <Link
+          href="https://www.google.com"
+          className={classes.link}
+          data-testid="nav_link"
+        >
+          Home
+        </Link>
+        <Link href="#" className={classes.link} data-testid="nav_link">
+          Shop
+        </Link>
+
+        <Link href="#" className={classes.link} data-testid="nav_link">
+          About
+        </Link>
+        <Link href="#" className={classes.link} data-testid="nav_link">
+          Contact
+        </Link>
+      </Typography>
+    </div>
+  );
+};
 
 const styles = ({ palette, breakpoints }) => ({
   container: {
-      display: 'none',
+    display: "none",
     [breakpoints.up("sm")]: {
       display: "flex",
       paddingLeft: "25px",
