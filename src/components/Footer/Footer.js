@@ -211,7 +211,6 @@ const styles = ({ palette, breakpoints, spacing, typography }) => ({
     paddingTop: '15px',
     backgroundColor: "transparent",
     fontSize: "1.3rem",
-    fontWeight: 700,
     color: "#666666",
     fontWeight: '800'
   },
