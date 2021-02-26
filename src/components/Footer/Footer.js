@@ -179,8 +179,7 @@ const Footer = ({ classes }) => {
         </div>
       </div>
       <div className={classes.copyRigthDiv}>
-        <p>Copyright © 2020 Thai Programmer Group</p>
-        <p>Powered by Shopify</p>
+        <p>Copyright © 2021 Thai Programmers in USA</p>
       </div>
     </div>
   );
@@ -191,8 +190,7 @@ Footer.propTypes = {
 const styles = ({ palette, breakpoints, spacing, typography }) => ({
   footerContainer: {
     width: "100%",
-    position: "absolute",
-    top: "70%",
+    marginTop: '50px',
     padding: "20px",
     color: "#4d4d4d",
   },
@@ -233,7 +231,7 @@ const styles = ({ palette, breakpoints, spacing, typography }) => ({
   iconsContainer: {
     display: "flex",
     justifyContent: 'space-between',
-    width:'70%'
+    width:'200px'
   },
   subRow: {
     [breakpoints.down("sm")]: {
