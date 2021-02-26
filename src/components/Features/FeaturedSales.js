@@ -4,6 +4,7 @@ import Grid from '@material-ui/core/Grid';
 
 import FeaturedCard from './FeaturedCard';
 import featuredSaleData from '../../assets/staticData/featuredSaleData';
+import SectionTitle from '../SectionTitle';
 
 const useStyles = makeStyles(({palette,breakpoints}) => ({
     root: {
@@ -21,7 +22,8 @@ const FeaturedSales = () => {
 
     return (
         <div className={classes.root}>
-            <h2>*** PLACE HOLDER: Save Big On Popular Design ***</h2>
+            <SectionTitle title="Save Big On Popular Design"/>
+
             <Grid container spacing={2}>
                 {saleStyleOptions.map((styleOption, idx) => (
                     <Grid item 

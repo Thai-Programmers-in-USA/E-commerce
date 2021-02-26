@@ -1,17 +1,15 @@
 import React from "react";
 import ProductCard from "../ProductCard";
 import ProductData from "../ProductCard/ProductData";
+import SectionTitle from "../SectionTitle";
 import withStyles from "@material-ui/core/styles/withStyles";
-import Typography from "@material-ui/core/Typography";
 import FeaturedCollectionSecond from "./FeaturedCollectionSecond";
 // import Card from '@material-ui/core/Card';
 
 const FeaturedCollection = ({ classes }) => {
   return (
     <div className={classes.container}>
-      <Typography variant="subtitle2" component="p" className={classes.title}>
-        Featured Collection
-      </Typography>
+      <SectionTitle title="Featured Collection"/>
       <div className={classes.cardsContainer}>
         {ProductData.map((product, index) => {
           if (index !== ProductData.length - 1)
@@ -54,14 +52,7 @@ const styles = ({ palette, breakpoints }) => ({
     [breakpoints.down("sm")]: {
       overflowX: "scroll",
     },
-  },
-
-  title: {
-    fontSize: 20,
-    marginBottom: "2%",
-    fontWeight: 700,
-    color: palette.secondary.main,
-  },
+  }
 });
 
 export default withStyles(styles)(FeaturedCollection);
