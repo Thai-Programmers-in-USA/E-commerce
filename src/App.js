@@ -10,9 +10,9 @@ function App({classes}) {
   return (
       <MuiThemeProvider theme={theme}>
         <div className={classes.container}>
-          <Header />
+          {/* <Header /> */}
             <Home />
-          <Footer />
+          {/* <Footer /> */}
         </div>
       </MuiThemeProvider>
 
@@ -21,7 +21,7 @@ function App({classes}) {
 
 const styles = ({palette, breakpoints, spacing,typography}) => ({
     container: {
-      margin: "0 auto",
+      margin: 0,
       // width: "95%",
       padding: '10px',
       textAlign: "center",
@@ -29,10 +29,19 @@ const styles = ({palette, breakpoints, spacing,typography}) => ({
       flexDirection: "column",
       alignItems: "center",
       justifyContent: "flex-start",
-      [breakpoints.up('md')]: {
-      padding: '20px',
-       
+      [breakpoints.up('sm')]: {
+        width: "70%",
       },
+      [breakpoints.down('sm')]: {
+        width: "100%",
+      },
+      [breakpoints.up('md')]: {
+        width: "90%",
+        padding: '20px',
+      },
+      [breakpoints.up('lg')]: {
+        width: "80%"
+      }
     }
 });
 
