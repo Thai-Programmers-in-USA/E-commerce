@@ -1,12 +1,9 @@
 version: '3'
 
 services:
-  server:
+  server-prod:
     build:
       context: .
-      dockerfile: Dockerfile.development
-    volumes:
-      - /app/node_modules
-      - .:/app
+      dockerfile: Dockerfile
     ports:
-      - '5000:3000'
+      - '80:80'
