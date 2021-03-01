@@ -3,7 +3,7 @@ FROM node:lts-alpine3.10
 
 RUN mkdir /app
 
-WORKDIR /appp
+WORKDIR /app
 
 COPY package*.json ./
 
