@@ -18,7 +18,7 @@ for (let i = 1; i <= 10; i++) {
 
 const color = ["White"];
 
-const FeaturedCollectionSecond = ({ product, classes }) => {
+const ProductDetailCard = ({ product, classes }) => {
   let discount = 0;
   let finalPrice = product.price.toFixed(2);
   if (product.isOnSale) {
@@ -32,7 +32,7 @@ const FeaturedCollectionSecond = ({ product, classes }) => {
         <img
           alt="white speaker"
           className={classes.img}
-          src="https://cdn.shopify.com/s/files/1/2111/1121/products/Lenny_Wireless_Speaker_White_1000x1000.jpg?v=1569030648"
+          src={product.img}
         />
       </div>
       <div className={classes.rightContainer}>
@@ -125,7 +125,7 @@ const FeaturedCollectionSecond = ({ product, classes }) => {
   );
 };
 
-FeaturedCollectionSecond.propTypes = {
+ProductDetailCard.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
@@ -276,4 +276,4 @@ const styles = ({ palette, breakpoints }) => ({
   },
 });
 
-export default withStyles(styles)(FeaturedCollectionSecond);
+export default withStyles(styles)(ProductDetailCard);

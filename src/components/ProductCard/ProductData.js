@@ -48,7 +48,7 @@ const productData = [
         "name": "Lenny Wireless Speaker",
         "slug": "Lenny-Wireless-Speaker",
         "brand": "Elipson",
-        "img": "https://cdn.shopify.com/s/files/1/2111/1121/products/Hideaway_1_695x695.jpg?v=1569030648",
+        "img": "https://cdn.shopify.com/s/files/1/2111/1121/products/Lenny_Wireless_Speaker_White_1000x1000.jpg?v=1569030648",
         "price": 500.00, 
         "isOnSale": true,
         "salePercentage": 25
