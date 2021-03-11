@@ -12,10 +12,11 @@ for (let i = 1; i <= 10; i++) {
 }
 
 
-const AddQuantityToCart = ({ product, classes }) => {
+const AddQuantityToCart = ({ product, showQuantityDropdown,showAddToCartBtn, classes }) => {
   return (
     <div className={classes.btnContainer}>
-      <FormControl variant="outlined" className={classes.quantityContainer}>
+      { showQuantityDropdown && 
+      (<FormControl variant="outlined" className={classes.quantityContainer}>
         <InputLabel htmlFor="outlined-age-native-simple">
           Quantity
         </InputLabel>
@@ -36,9 +37,10 @@ const AddQuantityToCart = ({ product, classes }) => {
             </option>
           ))}
         </Select>
-      </FormControl>
-
-      <Button
+      </FormControl>)}
+      
+      {showAddToCartBtn && 
+      (<Button
         className={classes.btnAddToCart}
         variant="contained"
         color="primary"
@@ -50,7 +52,7 @@ const AddQuantityToCart = ({ product, classes }) => {
         >
           Add to cart
         </Typography>
-      </Button>
+      </Button>)}
     </div>
   )
 };

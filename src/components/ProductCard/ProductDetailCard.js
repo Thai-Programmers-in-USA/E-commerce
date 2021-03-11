@@ -68,7 +68,11 @@ const ProductDetailCard = ({ product, classes }) => {
           Color: {color}
         </Typography>
 
-        <AddQuantityToCart />
+        <AddQuantityToCart 
+          product={product}
+          showQuantityDropdown={true}
+          showAddToCartBtn={true}
+        />
         
         <Link to={`/product/${product.slug}`} className={classes.link}>
           <Typography className={classes.fullDetailText} variant="body2">
