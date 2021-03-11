@@ -5,6 +5,7 @@ import withStyles from "@material-ui/core/styles/withStyles";
 import Card from "@material-ui/core/Card";
 import Button from "@material-ui/core/Button";
 import SaleTag from "./SaleTag";
+import { Link } from 'react-router-dom';
 
 const ProductCard = ({ product, classes }) => {
   let discount = 0;
@@ -18,12 +19,15 @@ const ProductCard = ({ product, classes }) => {
   return (
     <Card className={classes.container} variant="outlined">
       <div className={classes.detailsContainer}>
-        <img
-          alt="product"
-          src={product.img}
-          className={classes.img}
-          data-testid="product_img"
-        />
+        <Link to={`/product/${product.slug}`}>
+          <img
+            alt="product"
+            src={product.img}
+            className={classes.img}
+            data-testid="product_img"
+          />
+        </Link>
+        
         {product.isOnSale && <SaleTag discount={discount.toFixed(2)} />}
         <Typography
           className={classes.name}
