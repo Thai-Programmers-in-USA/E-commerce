@@ -190,44 +190,44 @@ const styles = ({ palette, breakpoints }) => ({
     fontSize: 20,
     fontWeight: 400,
   },
-  btnContainer: {
-    marginTop: "20px",
-    width: "100%",
+  // btnContainer: {
+  //   marginTop: "20px",
+  //   width: "100%",
 
-    [breakpoints.down("xs")]: {
-      display: "flex",
-      justifyContent: "center",
-    },
-  },
-  btnSelect: {
-    height: "37px",
-    padding: "6px",
+  //   [breakpoints.down("xs")]: {
+  //     display: "flex",
+  //     justifyContent: "center",
+  //   },
+  // },
+  // btnSelect: {
+  //   height: "37px",
+  //   padding: "6px",
 
-    [breakpoints.down("sm")]: {
-      width: "110px",
-      height: "47px",
-    },
-  },
-  btnAddToCart: {
-    backgroundColor: palette.primary.main,
-    width: "50%",
-    textTransform: "capitalize",
-    fontWeight: 700,
-    marginLeft: "25px",
-    marginBottom: "25px",
+  //   [breakpoints.down("sm")]: {
+  //     width: "110px",
+  //     height: "47px",
+  //   },
+  // },
+  // btnAddToCart: {
+  //   backgroundColor: palette.primary.main,
+  //   width: "50%",
+  //   textTransform: "capitalize",
+  //   fontWeight: 700,
+  //   marginLeft: "25px",
+  //   marginBottom: "25px",
 
-    [breakpoints.down("sm")]: {
-      width: "300px",
-      height: "47px",
-      marginLeft: "10px",
-    },
-  },
-  btnAddToCartText: {
-    [breakpoints.down("sm")]: {
-      textTransform: "None",
-      fontWeight: 600,
-    },
-  },
+  //   [breakpoints.down("sm")]: {
+  //     width: "300px",
+  //     height: "47px",
+  //     marginLeft: "10px",
+  //   },
+  // },
+  // btnAddToCartText: {
+  //   [breakpoints.down("sm")]: {
+  //     textTransform: "None",
+  //     fontWeight: 600,
+  //   },
+  // },
   link: {
     color: palette.primary.main,
   },
