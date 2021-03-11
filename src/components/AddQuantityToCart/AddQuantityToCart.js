@@ -1,89 +1,58 @@
-import React from "react";
-import { Link } from 'react-router-dom';
+import React from 'react';
 import withStyles from "@material-ui/core/styles/withStyles";
 import Typography from "@material-ui/core/Typography";
-import Card from "@material-ui/core/Card";
-import PropTypes from "prop-types";
-import SaleTag from "../ProductCard/SaleTag";
-import SocialIcon from "../ProductCard/SocialIcon";
-import AddQuantityToCart from '../AddQuantityToCart';
+import FormControl from "@material-ui/core/FormControl";
+import InputLabel from "@material-ui/core/InputLabel";
+import Select from "@material-ui/core/Select";
+import Button from "@material-ui/core/Button";
 
-const color = ["White"];
+const quantity = [];
+for (let i = 1; i <= 10; i++) {
+  quantity.push(i);
+}
 
-const ProductDetailCard = ({ product, classes }) => {
-  let discount = 0;
-  let finalPrice = product.price.toFixed(2);
-  if (product.isOnSale) {
-    discount = product.price * (product.salePercentage / 100);
-    finalPrice = product.price - discount;
-  }
 
+const AddQuantityToCart = ({ product, classes }) => {
   return (
-    <Card className={classes.bigContainer} variant="outlined">
-      <div className={classes.leftContainer}>
-        <img
-          alt="white speaker"
-          className={classes.img}
-          src={product.img}
-        />
-      </div>
-      <div className={classes.rightContainer}>
-        <Typography className={classes.nameTitle} variant="subtitle2">
-          {product.name}
-        </Typography>
-        <Typography className={classes.brand} variant="body2">
-          {" "}
-          by{" "}
-          <a href="/" className={classes.link}>
-            {product.brand}
-          </a>
-        </Typography>
-        <div className={classes.priceContainer}>
-          {product.isOnSale && (
-            <>
-              <SaleTag discount={discount.toFixed(2)} />
+    <div className={classes.btnContainer}>
+      <FormControl variant="outlined" className={classes.quantityContainer}>
+        <InputLabel htmlFor="outlined-age-native-simple">
+          Quantity
+        </InputLabel>
+        <Select
+          className={classes.btnSelect}
+          native
+          value={1}
+          onChange={(e) => console.log(e.target.value)}
+          label="Quantity"
+          inputProps={{
+            name: "Quantity",
+            id: "outlined-age-native-simple",
+          }}
+        >
+          {quantity.map((quantity, index) => (
+            <option value={quantity} key={index}>
+              {quantity}
+            </option>
+          ))}
+        </Select>
+      </FormControl>
 
-              <Typography
-                className={classes.originalPrice}
-                variant="body2"
-                component="p"
-              >
-                ${product.price.toFixed(2)}
-              </Typography>
-            </>
-          )}
-          <Typography
-            className={classes.finalPrice}
-            variant="body2"
-            component="p"
-          >
-            ${finalPrice}
-          </Typography>
-        </div>
+      <Button
+        className={classes.btnAddToCart}
+        variant="contained"
+        color="primary"
+      >
         <Typography
-          className={classes.chooseColor}
-          variant="body2"
+          className={classes.btnAddToCartText}
+          variant="subtitle2"
           component="p"
         >
-          Color: {color}
+          Add to cart
         </Typography>
-
-        <AddQuantityToCart />
-        
-        <Link to={`/product/${product.slug}`} className={classes.link}>
-          <Typography className={classes.fullDetailText} variant="body2">
-            View full detail
-          </Typography>
-        </Link> 
-
-        <SocialIcon />
-      </div>
-    </Card>
-  );
-};
-
-ProductDetailCard.propTypes = {
-  classes: PropTypes.object.isRequired,
+      </Button>
+    </div>
+  )
 };
 
 const styles = ({ palette, breakpoints }) => ({
@@ -233,4 +202,4 @@ const styles = ({ palette, breakpoints }) => ({
   },
 });
 
-export default withStyles(styles)(ProductDetailCard);
+export default withStyles(styles)(AddQuantityToCart)
