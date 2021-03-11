@@ -10,12 +10,21 @@ import AddQuantityToCart from '../AddQuantityToCart';
 
 const color = ["White"];
 
-const ProductDetailCard = ({ product, classes }) => {
+const ProductDetailCard = ({ product, showProductDesc, classes }) => {
   let discount = 0;
   let finalPrice = product.price.toFixed(2);
   if (product.isOnSale) {
     discount = product.price * (product.salePercentage / 100);
     finalPrice = product.price - discount;
+  }
+
+  // TODO: =================================
+  // write function add quantity to cart that
+  // trigger when onClick AddToCart button
+  // OR ====================================
+  // function dispatch to action ADD_CART(handle globally)
+  const AddToCartHandler = () => {
+    console.log("in ProductDetailCard CLickk!! AddTOCart")
   }
 
   return (
@@ -69,7 +78,7 @@ const ProductDetailCard = ({ product, classes }) => {
         </Typography>
 
         <AddQuantityToCart 
-          product={product}
+          AddToCartHandler={AddToCartHandler}
           showQuantityDropdown={true}
           showAddToCartBtn={true}
         />
@@ -81,6 +90,8 @@ const ProductDetailCard = ({ product, classes }) => {
         </Link> 
 
         <SocialIcon />
+
+        {showProductDesc && (<p>HARDCODING** Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto nulla ipsam numquam accusantium ad. Consequatur voluptas sed corporis a autem veniam tenetur corrupti commodi laborum aspernatur maxime reprehenderit, magnam praesentium.</p>)}
       </div>
     </Card>
   );
@@ -130,6 +141,7 @@ const styles = ({ palette, breakpoints }) => ({
     flex: 1,
     flexDirection: "column",
     justifyContent: "center",
+    alignItems: "flex-start", //++++++ stlye for detail page
     marginTop: "65px",
 
     [breakpoints.down("sm")]: {

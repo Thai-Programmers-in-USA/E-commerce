@@ -12,7 +12,7 @@ for (let i = 1; i <= 10; i++) {
 }
 
 
-const AddQuantityToCart = ({ product, showQuantityDropdown,showAddToCartBtn, classes }) => {
+const AddQuantityToCart = ({ AddToCartHandler, showQuantityDropdown,showAddToCartBtn, classes }) => {
   return (
     <div className={classes.btnContainer}>
       { showQuantityDropdown && 
@@ -44,6 +44,7 @@ const AddQuantityToCart = ({ product, showQuantityDropdown,showAddToCartBtn, cla
         className={classes.btnAddToCart}
         variant="contained"
         color="primary"
+        onClick={AddToCartHandler}
       >
         <Typography
           className={classes.btnAddToCartText}

@@ -8,7 +8,7 @@ const ProductDetail = ({ match, classes }) => {
 
   return (
     <div>
-      <ProductDetailCard product={product} />
+      <ProductDetailCard product={product} showProductDesc={true} />
     </div>
   )
 }

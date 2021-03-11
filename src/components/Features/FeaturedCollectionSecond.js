@@ -15,6 +15,12 @@ for (let i = 1; i <= 10; i++) {
 
 const color = ["White"];
 
+// TODO: ===============================================
+// Option 1 - write function add quantity to cart that
+// trigger when onClick AddToCart button(same fuction as in ProductDetailCard )
+// Option 2 - function dispatch to action ADD_CART(handle glbally)
+// Option 3 - consolidate this component with ProductDetailCard component
+// =====================================================
 const FeaturedCollectionSecond = ({ product, classes }) => {
   let discount = 0;
   let finalPrice = product.price.toFixed(2);
@@ -74,7 +80,7 @@ const FeaturedCollectionSecond = ({ product, classes }) => {
         </Typography>
 
         <AddQuantityToCart 
-          product={product}
+          // AddToCartHandler={AddToCartHandler}
           showQuantityDropdown={true}
           showAddToCartBtn={true}
         />
