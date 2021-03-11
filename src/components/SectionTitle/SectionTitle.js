@@ -12,9 +12,9 @@ const SectionTitle = ({ classes, title }) => {
 
 const styles = ({ palette }) => ({
   title: {
-    fontSize: 20,
-    margin: '2% 0',
-    fontWeight: 700,
+    fontSize: 22,
+    margin: '7% 0 2%',
+    fontWeight: 800,
     color: palette.secondary.main,
   },
 });

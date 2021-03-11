@@ -10,7 +10,7 @@ const defaultStyles = {
   cardContentStyle: {
     marginBottom: "25px",
     // height: "100%",
-    minHeight: "290px",
+    minHeight: "315px",
     display: "flex",
     flexDirection: "column",
     justifyContent: "flex-start",
